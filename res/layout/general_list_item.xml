@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/general_software_list_item"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/normal_list_selector" >
+
+    <RelativeLayout
+        android:id="@+id/list_item"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <!-- 软件图标 -->
+
+        <ImageView
+            android:id="@+id/software_icon"
+            android:layout_width="@dimen/software_icon_size"
+            android:layout_height="@dimen/software_icon_size"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="18dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/software_icon_bg"
+            android:scaleType="fitXY"
+            android:src="@drawable/sw_default_icon" />
+
+        <!-- 首发 -->
+
+        <ImageView
+            android:id="@+id/first_rel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/first_release"
+            android:visibility="gone" />
+
+        <!-- 分隔线 -->
+
+        <TextView
+            android:id="@+id/icon_line_softinfo"
+            android:layout_width="1px"
+            android:layout_height="42dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_toRightOf="@+id/software_icon"
+            android:background="#ffdbdbdb"
+            android:text="" />
+
+        <LinearLayout
+            android:id="@+id/software_first_line_info"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/icon_line_softinfo"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <!-- 软件名称 -->
+
+            <TextView
+                android:id="@+id/software_item_name"
+                style="@style/textstyle_xm_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:text="手机QQ " />
+
+            <!-- 费用 -->
+
+            <TextView
+                android:id="@+id/software_fees"
+                style="@style/textstyle_xs_gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:text="免费 " />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/software_second_line_info"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/software_first_line_info"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="7dp"
+            android:layout_toRightOf="@id/icon_line_softinfo"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <!-- 软件大小 -->
+
+            <TextView
+                android:id="@+id/software_size"
+                style="@style/textstyle_s_gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="" >
+            </TextView>
+
+            <!-- 分隔线 -->
+
+            <TextView
+                android:id="@+id/size_line_download"
+                android:layout_width="1px"
+                android:layout_height="@dimen/software_item_size_loadcount"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:background="@color/software_item_info"
+                android:text="" >
+            </TextView>
+
+            <!-- 下载数量 -->
+
+            <TextView
+                android:id="@+id/share_way"
+                style="@style/textstyle_s_gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="" >
+            </TextView>
+
+            <!-- 星星儿 -->
+
+        </LinearLayout>
+    </RelativeLayout>
+
+<!--     <include
+        android:id="@+id/ActionBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/list_item"
+        android:layout_marginTop="-10dip"
+        layout="@layout/quick_action_bar_layout"
+        android:visibility="gone" /> -->
+
+</RelativeLayout>

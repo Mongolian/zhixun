@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 决定把首页所有页面塞到一个xml中，理由， 如果使用tabwidget,后面一些特效及动画不好实现 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background_for_all" >
+
+   
+    
+</RelativeLayout>

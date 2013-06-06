@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_enabled="false" android:color="@drawable/textgary"/>
+    <item android:state_window_focused="false" android:color="@drawable/textgary"/>
+    <item android:state_pressed="true" android:color="@drawable/textwhite"/>
+    <item android:state_selected="true" android:color="@drawable/textwhite"/>
+    <item android:color="@drawable/textgary"/>
+    <!-- not selected -->
+
+</selector>

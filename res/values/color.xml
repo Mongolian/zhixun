@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <drawable name="taball">#77abcd</drawable>
+    <drawable name="background">#ecf1f4</drawable>
+    <drawable name="listsingle">#e4ecf1</drawable>
+    <drawable name="textblue">#1477cd</drawable>
+    <drawable name="textwhite">#ffffff</drawable>
+    <drawable name="textgary">#8ea1ac</drawable>
+    <drawable name="notification_text_black">#000000</drawable>
+    <drawable name="textgary2">#959899</drawable>
+    <drawable name="textblacksf">#265064</drawable>
+    <drawable name="textsoftmsg">#4c5d65</drawable>
+    <drawable name="editcommenttext">#94a6b1</drawable>
+    <drawable name="edittext">#61727a</drawable>
+    <drawable name="blueBg">#1477cd</drawable>
+    <drawable name="radiounclick">#529edf</drawable>
+    <drawable name="textmenu">#6f6d70</drawable>
+    <drawable name="fenlan">#718295</drawable>
+    <drawable name="background_button_color">#e2e8eb</drawable>
+    <drawable name="hotword_more_line1">#cdcfd4</drawable>
+    <drawable name="hotword_more_line2">#f2f4f5</drawable>
+    <drawable name="edit_bg1">#d5dde5</drawable>
+    <drawable name="trans">#00000000</drawable>
+    <drawable name="tab_text_new">#697074</drawable>
+    <drawable name="setting_category_color">#f7e9a8</drawable>
+    <drawable name="list_selected_bg_color">#f7e9a8</drawable>
+    <drawable name="black_skin_text_color">#4c4c4c</drawable>
+    <drawable name="qrcode_text_bg_white">#ffffff</drawable>
+    <color name="conn_error_bg">#c8000000</color>
+
+    <color name="text_tab">#ff0d86a3</color>
+    <color name="text_shadow">#8824638c</color>
+    <color name="text_tab_nor">#ff6f7b7e</color>
+    <color name="red">#ffdd2222</color>
+    <color name="background_for_all">#fff4f7f9</color>
+    <color name="title_shadow">#33000000</color>
+    <color name="weak_bt_text_color">#ff39a5bd</color>
+    <color name="weak_bt_shadow_color">#ffffffff</color>
+    <color name="tag_color_1">#fff35925</color>
+    <color name="tag_color_2">#ffed0089</color>
+    <color name="tag_color_3">#ff763b96</color>
+    <color name="tag_color_4">#ff097691</color>
+    <color name="tag_color_5">#ff4a8c0a</color>
+    <color name="qq_white">#fff3f7f8</color>
+    <color name="social_login_info">#ff1177ac</color>
+    <color name="guest_bg_color">#e6e6e6</color>
+    <color name="tab_color">#ffdae2e5</color>
+    <color name="diliver_color">#ffb7c9ce</color>
+    <color name="scroll_ad_text_bg">#80333333</color>
+
+    <!-- 滑动广告位的字体背景图 -->
+    <color name="qa_undownload_color">#a9b2bb</color>
+    <color name="total_tab_text_color">#d0edff</color>
+    <color name="all_list_bg_color">#fff4f7f9</color>
+    <color name="total_custom_tab_text">#baddff</color>
+    <color name="expandable_list_group_color">#e0e0e0</color>
+    <color name="expandable_list_category_color">#404040</color>
+    <color name="list_item_description_color">#7a7a7a</color>
+    <color name="link_color">#1283b7</color>
+    <color name="no_data_info_color">#7a7a7a</color>
+
+    <!-- 社区朋友字体颜色 -->
+    <color name="social_friend_black">#ff000000</color>
+    <color name="social_friend_gray">#ff7e7f80</color>
+    <color name="guest_bg_color_new">#F5f8fa</color>
+    <color name="guest_cut_line_color">#bfbfbf</color>
+    <color name="total_tab_unselected_color">#aaffffff</color>
+
+    <drawable name="bottom_tab_unselected_color">#84bbdf</drawable>
+
+    <color name="white">#ffffffff</color>
+    <color name="translucence_white">#80ffffff</color>
+    <color name="black">#ff000000</color>
+    <color name="gold">#b89766</color>
+    <color name="transparent">#00000000</color>
+    <color name="alert_dialog_cut_line">#cacdce</color>
+    <color name="top_tab_text_shadow">#80ffffff</color>
+    <color name="software_item_name">#ff262626</color>
+    <color name="software_item_info">#ffadb0b3</color>
+    <color name="default_skin_text_color">#0b7ec8</color>
+    <color name="red_skin_text_color">#e45041</color>
+    <color name="pink_skin_text_color">#ec5ca4</color>
+    <color name="black_skin_text_color">#4c4c4c</color>
+    <color name="social_enable_color">#666666</color>
+    <color name="social_disable_color">#bfbfbf</color>
+    <color name="default_total_tab_bottom_line">#01578d</color>
+    <color name="black_total_tab_bottom_line">#000000</color>
+    <color name="pink_total_tab_bottom_line">#94205f</color>
+    <color name="red_total_tab_bottom_line">#880502</color>
+    <color name="local_downloading_text">#565656</color>
+    <color name="more_storage_detail_warn_color">#f45e57</color>
+    <color name="more_storage_detail_orange">#f8b556</color>
+    <color name="textcolor_storageinfo_low">#346a01</color>
+    <color name="textcolor_storageinfo_middle">#984801</color>
+    <color name="textcolor_storageinfo_high">#930700</color>
+    
+    <color name="default_total_tab_top_line1">#005083</color>
+    <color name="default_total_tab_top_line2">#57abe2</color>
+    
+    <color name="black_total_tab_top_line1">#000000</color>
+    <color name="black_total_tab_top_line2">#5f696e</color>
+    
+    <color name="pink_total_tab_top_line1">#94205f</color>
+    <color name="pink_total_tab_top_line2">#db71b8</color>
+    
+    <color name="red_total_tab_top_line1">#880502</color>
+    <color name="red_total_tab_top_line2">#d85a4d</color>
+        <color name="viewfinder_frame">#ffffffff</color>
+    <color name="viewfinder_laser">#ffff0000</color>
+    <color name="viewfinder_mask">#a8000000</color>
+    <color name="result_view">#b0000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+
+    <color name="textcolor_gray">#8a888a</color>
+    <color name="textcolor_gray_disable">#cdcdcd</color>
+    <color name="textcolor_black">#333233</color>
+    <color name="textcolor_black_disable">#8a888a</color>
+    
+</resources>

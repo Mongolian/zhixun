@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2006 The Android Open Source Project Licensed under the 
+	Apache License, Version 2.0 (the "License"); you may not use this file except 
+	in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 
+	Unless required by applicable law or agreed to in writing, software distributed 
+	under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES 
+	OR CONDITIONS OF ANY KIND, either express or implied. See the License for 
+	the specific language governing permissions and limitations under the License.
+-->
+
+<resources>
+
+    <!-- Global Theme Styles -->
+    <eat-comment />
+
+    <style name="TabWidget"></style>
+
+    <style name="AppTextTitle">
+        <item name="android:textSize">24dip</item>
+    </style>
+
+
+    <style name="software_theme" parent="android:Theme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@null</item>
+    </style>
+
+
+
+
+
+    <style name="SearchAutoCompleteTextView" parent="@android:style/Widget.AutoCompleteTextView">
+        <item name="android:dropDownWidth">30dip</item>
+    </style>
+
+    <style name="ListView_style">
+        <item name="android:background">@drawable/background</item>
+        <item name="android:divider">@drawable/divider</item>
+        <item name="android:dividerHeight">2dip</item>
+        <item name="android:scrollbarThumbVertical">@drawable/scrollbar</item>
+        <item name="android:fadingEdge">none</item>
+        <item name="android:headerDividersEnabled">true</item>
+        <item name="android:footerDividersEnabled">true</item>
+    </style>
+
+    <style name="textview_blue">
+        <item name="android:textSize">16dip</item>
+        <item name="android:textColor">@drawable/text_color_c</item>
+    </style>
+
+    <style name="more_hotwords_sytle">
+        <item name="android:textSize">16dip</item>
+        <item name="android:textColor">@drawable/text_color_c</item>
+        <item name="android:background">@drawable/background_button</item>
+    </style>
+
+    <style name="textview_small_blue">
+        <item name="android:textSize">14dip</item>
+        <item name="android:textColor">@drawable/text_color_c</item>
+    </style>
+
+    <style name="textview_bluebold">
+        <item name="android:textSize">16dip</item>
+        <item name="android:textColor">@drawable/textblue</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="textview_setting">
+        <item name="android:textSize">18dip</item>
+        <item name="android:textColor">@drawable/black_skin_text_color</item>
+    </style>
+
+    <style name="textview_textgary">
+        <item name="android:textSize">14dip</item>
+        <item name="android:textColor">@drawable/text_color2_c</item>
+    </style>
+
+    <style name="textview_textgray2">
+        <item name="android:textSize">12dip</item>
+        <item name="android:textColor">@drawable/text_color_gray2_c</item>
+    </style>
+
+    <style name="textview_texttab">
+        <item name="android:textSize">14dip</item>
+        <item name="android:textColor">@drawable/text_color3_c</item>
+    </style>
+
+    <style name="tab_bottom_text_style">
+        <item name="android:textSize">12dip</item>
+        <item name="android:shadowColor">@color/title_shadow</item>
+        <item name="android:shadowRadius">1.5</item>
+        <item name="android:shadowDy">0.5</item>
+        <item name="android:textColor">@drawable/tab_bottom_text_selector</item>
+    </style>
+
+    <style name="bottom_widget_text_style">
+        <item name="android:textSize">12dip</item>
+        <item name="android:textColor">@drawable/bottom_widget_text_color</item>
+    </style>
+
+    <style name="textview_softtitle">
+        <item name="android:textSize">14dip</item>
+        <item name="android:textColor">@drawable/fenlan</item>
+    </style>
+
+    <style name="textview_textsoft">
+        <item name="android:textSize">12dip</item>
+        <item name="android:textColor">@drawable/textsoftmsg</item>
+    </style>
+
+
+    <style name="textview_softmsg">
+        <item name="android:textSize">13dip</item>
+        <item name="android:textColor">@drawable/textsoftmsg</item>
+    </style>
+
+    <style name="textsoftmsg">
+        <item name="android:textSize">12dip</item>
+        <item name="android:textColor">@drawable/text_color_softmsg_c</item>
+    </style>
+
+    <!--
+        style name="progressBar_load"> <item name="android:indeterminateOnly">false</item> 
+		<item name="android:progressDrawable">@drawable/progress_bar_type</item> 
+		<item name="android:indeterminateDrawable">@drawable/progress_indeterminate_type</item> 
+		<item name="android:minHeight">20dip</item> <item name="android:maxHeight">20dip</item> 
+		</style
+    -->
+
+    <style name="dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null  </item>
+        <item name="android:windowIsFloating">true  </item>
+        <item name="android:windowIsTranslucent">false  </item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="dialogLongClick" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null  </item>
+        <item name="android:windowIsFloating">true  </item>
+        <item name="android:windowIsTranslucent">false  </item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+
+
+
+    <style name="progressBar_activity_wait">
+        <item name="android:progressDrawable">@drawable/progressbar_activity_waiting</item>
+        <item name="android:indeterminateDrawable">@drawable/progressbar_activity_waiting</item>
+        <item name="android:indeterminate">true</item>
+        <item name="android:minWidth">24dip</item>
+        <item name="android:maxWidth">24dip</item>
+        <item name="android:minHeight">23dip</item>
+        <item name="android:maxHeight">23dip</item>
+    </style>
+
+    <style name="progressBar_storage_low">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/layer_progressbar_storage_low</item>
+        <item name="android:minHeight">22dip</item>
+        <item name="android:maxHeight">22dip</item>
+    </style>
+
+
+
+    <style name="snapshot_activity_wait">
+        <item name="android:progressDrawable">@drawable/loading_process_bar</item>
+        <item name="android:indeterminateDrawable">@drawable/loading_process_bar</item>
+        <item name="android:indeterminate">true</item>
+        <item name="android:minWidth">42dip</item>
+        <item name="android:maxWidth">42dip</item>
+        <item name="android:minHeight">42dip</item>
+        <item name="android:maxHeight">42dip</item>
+    </style>
+    <!--
+         style name="MyOpaqueActivity" parent="@android:style/Theme.Dialog"> 
+		<item name="android:windowBackground">@drawable/background</item> <item name="android:alertDialogStyle">@style/MyOpaqueAlertDialog</item> 
+		</style> <style name="MyOpaqueAlertDialog" parent="@android:style/Theme.Dialog.Alert"> 
+		<item name="android:background">#454545</item> <item name="android:windowBackground">@drawable/background</item> 
+		<item name="android:popupBackground">@drawable/background</item> </style
+    -->
+
+    <style name="shadowTextWhite">
+        <item name="android:textColor">@color/qq_white</item>
+        <item name="android:shadowColor">#ff5a8e9b</item>
+        <item name="android:shadowDy">-2</item>
+        <item name="android:shadowRadius">1</item>
+    </style>
+
+    <style name="sw_detail_context_text">
+        <item name="android:textColor">#ff7e7f80</item>
+        <item name="android:textSize">@dimen/textsize_xs</item>
+    </style>
+
+    <style name="sw_qq_safe_text">
+        <item name="android:textColor">#72ac1f</item>
+        <item name="android:textSize">@dimen/textsize_m</item>
+    </style>
+
+    <style name="sw_introduce_text">
+        <item name="android:textColor">@color/software_item_name</item>
+        <item name="android:textSize">@dimen/m_size</item>
+    </style>
+
+    <style name="weakBTshadow">
+        <item name="android:shadowColor">#d1d6de</item>
+        <item name="android:shadowRadius">1.0</item>
+        <item name="android:shadowDy">2.2</item>
+        <item name="android:textColor">#526680</item>
+    </style>
+
+    <style name="subPageShadow">
+        <item name="android:shadowColor">@color/text_shadow</item>
+        <item name="android:shadowRadius">1.0</item>
+        <item name="android:shadowDy">2.2</item>
+        <item name="android:textColor">@color/total_custom_tab_text</item>
+    </style>
+
+    <style name="qa_btn_textcolor">
+        <item name="android:shadowColor">@color/qq_white</item>
+        <item name="android:shadowRadius">1.0</item>
+        <item name="android:shadowDy">2.2</item>
+        <item name="android:textColor">@color/default_skin_text_color</item>
+    </style>
+
+    <style name="list_btn_text_style">
+        <item name="android:textSize">14sp</item>
+        <item name="android:shadowColor">@color/text_shadow</item>
+        <item name="android:shadowRadius">1.0</item>
+        <item name="android:shadowDy">2.2</item>
+        <item name="android:textColor">@color/qq_white</item>
+    </style>
+
+    <style name="titleTabshadow">
+        <item name="android:shadowColor">@color/text_shadow</item>
+        <item name="android:shadowRadius">1.0</item>
+        <item name="android:shadowDy">-2.2</item>
+        <item name="android:textColor">@color/qq_white</item>
+    </style>
+
+    <style name="titleshadow">
+        <item name="android:shadowColor">@color/title_shadow</item>
+        <item name="android:shadowRadius">2.0</item>
+        <item name="android:shadowDy">-0.5</item>
+        <item name="android:textColor">@color/qq_white</item>
+    </style>
+
+    <style name="tabtitleshadow">
+        <item name="android:shadowColor">@color/title_shadow</item>
+        <item name="android:shadowRadius">1.5</item>
+        <item name="android:shadowDy">0.5</item>
+    </style>
+
+    <style name="Theme.CustomNoTitleFullScreenTheme" parent="android:Theme">
+        <item name="android:windowBackground">@drawable/trans</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowAnimationStyle">@+android:style/Animation.Translucent</item>
+    </style>
+
+    <style name="Theme.CustomDialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowBackground">@drawable/trans</item>
+    </style>
+
+    <style name="reportBadCheckbox">
+        <item name="android:textColor">#000</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+
+
+
+    <style name="splash_theme" parent="@android:style/Theme.Light.NoTitleBar.Fullscreen">
+        <item name="android:windowBackground">@drawable/trans</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowAnimationStyle">@style/AnimationActivity</item>
+    </style>
+
+    <style name="AnimationActivity" parent="@android:style/Animation.Activity">
+        <item name="android:taskCloseEnterAnimation">@null</item>
+        <item name="android:taskCloseExitAnimation">@anim/alt_disappare</item>
+        <item name="android:activityOpenEnterAnimation">@null</item>
+        <item name="android:activityOpenExitAnimation">@null</item>
+        <item name="android:activityCloseEnterAnimation">@null</item>
+        <item name="android:activityCloseExitAnimation">@anim/alt_disappare</item>
+    </style>
+
+    <style name="social_rich_soft_item_info">
+        <item name="android:textColor">#ff737373</item>
+        <item name="android:textSize">16dip</item>
+        <item name="android:textColorLink">#ff228bbc</item>
+    </style>
+
+    <style name="social_rich_soft_item_layout_info">
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+    </style>
+
+    <style name="social_rich_soft_item_broken_line">
+        <item name="android:background">@drawable/broken_line</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginTop">-10dp</item>
+        <item name="android:layout_marginBottom">-10dp</item>
+    </style>
+
+    <style name="shadowTextBlue">
+        <item name="android:textColor">#0583C7</item>
+        <item name="android:shadowColor">#A0CCE4</item>
+        <item name="android:shadowDy">-1</item>
+        <item name="android:shadowRadius">1</item>
+    </style>
+
+    <style name="dialogWindowAnim" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowExitAnimation">@anim/dialog_exit_anim</item>
+    </style>
+
+    <!-- 统一文字样式 -->
+    <style name="textstyle_b_gray">
+        <item name="android:textColor">@drawable/selector_textcolor_gray</item>
+        <item name="android:textSize">@dimen/textsize_b</item>
+        <item name="android:shadowColor">#c0ffffff</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">1</item>
+    </style>
+
+    <style name="textstyle_b_black">
+        <item name="android:textColor">@drawable/selector_textcolor_black</item>
+        <item name="android:textSize">@dimen/textsize_b</item>
+        <item name="android:shadowColor">#c0ffffff</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">1</item>
+    </style>
+
+    <style name="textstyle_xm_gray">
+        <item name="android:textColor">@drawable/selector_textcolor_gray</item>
+        <item name="android:textSize">@dimen/textsize_xm</item>
+        <item name="android:shadowColor">#c0ffffff</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">1</item>
+    </style>
+
+    <style name="textstyle_xm_black">
+        <item name="android:textColor">@drawable/selector_textcolor_black</item>
+        <item name="android:textSize">@dimen/textsize_xm</item>
+        <item name="android:shadowColor">#c0ffffff</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">1</item>
+    </style>
+
+    <style name="textstyle_m_gray">
+        <item name="android:textColor">@drawable/selector_textcolor_gray</item>
+        <item name="android:textSize">@dimen/textsize_m</item>
+        <item name="android:shadowColor">#c0ffffff</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">1</item>
+    </style>
+
+    <style name="textstyle_m_black">
+        <item name="android:textColor">@drawable/selector_textcolor_black</item>
+        <item name="android:textSize">@dimen/textsize_m</item>
+        <item name="android:shadowColor">#c0ffffff</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">1</item>
+    </style>
+
+    <style name="textstyle_xs_gray">
+        <item name="android:textColor">@drawable/selector_textcolor_gray</item>
+        <item name="android:textSize">@dimen/textsize_xs</item>
+        <item name="android:shadowColor">#c0ffffff</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">1</item>
+    </style>
+
+    <style name="textstyle_xs_black">
+        <item name="android:textColor">@drawable/selector_textcolor_black</item>
+        <item name="android:textSize">@dimen/textsize_xs</item>
+        <item name="android:shadowColor">#c0ffffff</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">1</item>
+    </style>
+
+    <style name="textstyle_s_gray">
+        <item name="android:textColor">@drawable/selector_textcolor_gray</item>
+        <item name="android:textSize">@dimen/textsize_s</item>
+        <item name="android:shadowColor">#c0ffffff</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">1</item>
+    </style>
+
+    <style name="textstyle_s_black">
+        <item name="android:textColor">@drawable/selector_textcolor_black</item>
+        <item name="android:textSize">@dimen/textsize_s</item>
+        <item name="android:shadowColor">#c0ffffff</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">1</item>
+    </style>
+
+</resources>
