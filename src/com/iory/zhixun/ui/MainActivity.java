@@ -1,9 +1,10 @@
-package com.iory.zhixun;
+package com.iory.zhixun.ui;
 
 
 import java.util.ArrayList;
 import java.util.zip.Inflater;
 
+import com.iory.zhixun.R;
 import com.iory.zhixun.data.NewsItem;
 import com.iory.zhixun.data.NewsListAdapter;
 import com.iory.zhixun.view.HorizonScrollLayout;
@@ -221,10 +222,10 @@ public class MainActivity extends Activity {
 			// 首页二个广告位
 			mNewsListAdapter = new NewsListAdapter(this);
 			NewsItem item = new NewsItem();
-			item.setId(1);
-			item.setDetail("aaaa");
-			item.setOutline("jjaja");
-			item.setUrl("qqq");
+			item.id = 1;
+			item.detail = "aaaa";
+			item.outline = "jjaja";
+			item.url = "jjaja";
 			
 			ArrayList<NewsItem> arrayList = new ArrayList<NewsItem>();
 			arrayList.add(item);

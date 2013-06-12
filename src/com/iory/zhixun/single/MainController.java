@@ -9,10 +9,6 @@ import com.iory.zhixun.app.DLApp;
 import com.iory.zhixun.app.TLog;
 
 
-
-
-
-
 public class MainController {
 	private static final String TAG = MainController.class.getName();
 

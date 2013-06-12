@@ -6,16 +6,14 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
-import com.iory.zhixun.MainActivity;
+import com.iory.zhixun.ui.MainActivity;
 import com.iory.zhixun.R;
 import com.iory.zhixun.app.DLApp;
-import com.iory.zhixun.app.TLog;
 
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.Rect;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
