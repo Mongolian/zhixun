@@ -1,20 +1,5 @@
 package com.iory.zhixun.single;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Vector;
-import java.util.WeakHashMap;
-import java.util.concurrent.ConcurrentHashMap;
-
-import com.iory.zhixun.app.DLApp;
-import com.iory.zhixun.app.TLog;
-import com.iory.zhixun.utils.Tools.ImgTool;
-import com.iory.zhixun.utils.Utils;
-
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -23,6 +8,16 @@ import android.os.Handler;
 import android.os.Handler.Callback;
 import android.os.Message;
 import android.widget.ImageView;
+import com.iory.zhixun.app.DLApp;
+import com.iory.zhixun.app.TLog;
+import com.iory.zhixun.utils.Tools.ImgTool;
+import com.iory.zhixun.utils.Utils;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 
 
 public class IconManager {

@@ -1,6 +1,6 @@
 
 package com.iory.zhixun.view;
-import android.annotation.SuppressLint;
+
 import android.content.Context;
 import android.os.AsyncTask;
 import android.view.View;

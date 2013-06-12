@@ -1,13 +1,12 @@
 package com.iory.zhixun.single;
 
-import com.iory.zhixun.app.DLApp;
-import com.iory.zhixun.app.TLog;
-
 import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.NetworkInfo.State;
+import com.iory.zhixun.app.DLApp;
+import com.iory.zhixun.app.TLog;
 
 
 public class NetworkMonitor {

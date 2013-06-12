@@ -3,7 +3,6 @@ package com.iory.zhixun.view;
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.View.MeasureSpec;
 import android.widget.LinearLayout;
 import android.widget.Scroller;
 

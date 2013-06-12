@@ -106,7 +106,8 @@
     
     <color name="red_total_tab_top_line1">#880502</color>
     <color name="red_total_tab_top_line2">#d85a4d</color>
-        <color name="viewfinder_frame">#ffffffff</color>
+    
+    <color name="viewfinder_frame">#ffffffff</color>
     <color name="viewfinder_laser">#ffff0000</color>
     <color name="viewfinder_mask">#a8000000</color>
     <color name="result_view">#b0000000</color>
@@ -116,5 +117,8 @@
     <color name="textcolor_gray_disable">#cdcdcd</color>
     <color name="textcolor_black">#333233</color>
     <color name="textcolor_black_disable">#8a888a</color>
+
+    <color name="green">#090</color>
+    <color name="blue">#009</color>
     
 </resources>

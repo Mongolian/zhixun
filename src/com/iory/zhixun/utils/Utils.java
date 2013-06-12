@@ -1,15 +1,6 @@
 package com.iory.zhixun.utils;
 
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
-
-import com.iory.zhixun.ui.MainActivity;
-import com.iory.zhixun.R;
-import com.iory.zhixun.app.DLApp;
-
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.content.Context;
@@ -23,6 +14,14 @@ import android.os.Parcelable;
 import android.os.StatFs;
 import android.util.DisplayMetrics;
 import android.util.Log;
+import com.iory.zhixun.R;
+import com.iory.zhixun.app.DLApp;
+import com.iory.zhixun.ui.MainActivity;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 
 public class Utils {
 	
@@ -77,10 +76,6 @@ public class Utils {
 
 	/**
 	 * 添加自己快捷方式
-	 * 
-	 * @param drawres
-	 * @param mSoftname
-	 * @param mPackageName
 	 * @param context
 	 */
 	public static void addSelfShortCut(Context context) {

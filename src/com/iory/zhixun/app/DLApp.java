@@ -1,7 +1,5 @@
 package com.iory.zhixun.app;
 
-import java.util.ArrayList;
-
 import android.app.Application;
 import android.content.Context;
 import android.os.Handler;

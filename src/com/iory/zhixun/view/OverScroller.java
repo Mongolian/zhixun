@@ -1,9 +1,5 @@
 package com.iory.zhixun.view;
 
-import java.lang.reflect.Method;
-
-import com.iory.zhixun.R;
-
 import android.content.res.Resources;
 import android.graphics.Canvas;
 import android.graphics.Rect;
@@ -14,6 +10,9 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ScrollView;
+import com.iory.zhixun.R;
+
+import java.lang.reflect.Method;
 
 
 public class OverScroller {

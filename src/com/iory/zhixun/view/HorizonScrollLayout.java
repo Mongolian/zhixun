@@ -1,15 +1,10 @@
 package com.iory.zhixun.view;
 
-import com.iory.zhixun.app.TLog;
-
 import android.content.Context;
 import android.util.AttributeSet;
-import android.view.MotionEvent;
-import android.view.VelocityTracker;
-import android.view.View;
-import android.view.ViewConfiguration;
-import android.view.ViewGroup;
+import android.view.*;
 import android.widget.Scroller;
+import com.iory.zhixun.app.TLog;
 
 
 /**

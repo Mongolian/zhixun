@@ -1,16 +1,13 @@
 package com.iory.zhixun.app;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-
 import android.os.Handler;
 import android.os.Handler.Callback;
 import android.os.Message;
 import android.view.Gravity;
 import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class TLog {
 

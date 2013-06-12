@@ -1,27 +1,22 @@
 package com.iory.zhixun.data;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-
-import com.iory.zhixun.R;
-import com.iory.zhixun.app.TLog;
-import com.iory.zhixun.single.IconManager;
-import com.iory.zhixun.single.MainController;
-
 import android.app.Activity;
-import android.graphics.Bitmap;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
+import com.iory.zhixun.R;
+import com.iory.zhixun.app.TLog;
+
+import java.util.ArrayList;
+import java.util.Map;
 
 public class NewsListAdapter extends BaseAdapter {
 

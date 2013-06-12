@@ -1,7 +1,6 @@
 package com.iory.zhixun.view;
 
 import android.content.Context;
-import android.widget.LinearLayout;
 
 public class Getdensity {
 

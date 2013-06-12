@@ -6,7 +6,16 @@
 	Unless required by applicable law or agreed to in writing, software distributed 
 	under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES 
 	OR CONDITIONS OF ANY KIND, either express or implied. See the License for 
-	the specific language governing permissions and limitations under the License.
+	the specific language governing permissions and limitations under the License.
+
+
+
+
+
+
+
+
+
 -->
 
 <resources>
@@ -125,7 +134,16 @@
 		<item name="android:progressDrawable">@drawable/progress_bar_type</item> 
 		<item name="android:indeterminateDrawable">@drawable/progress_indeterminate_type</item> 
 		<item name="android:minHeight">20dip</item> <item name="android:maxHeight">20dip</item> 
-		</style
+		</style
+
+
+
+
+
+
+
+
+
     -->
 
     <style name="dialog" parent="@android:style/Theme.Dialog">
@@ -177,12 +195,34 @@
         <item name="android:minHeight">42dip</item>
         <item name="android:maxHeight">42dip</item>
     </style>
+
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
     <!--
          style name="MyOpaqueActivity" parent="@android:style/Theme.Dialog"> 
 		<item name="android:windowBackground">@drawable/background</item> <item name="android:alertDialogStyle">@style/MyOpaqueAlertDialog</item> 
 		</style> <style name="MyOpaqueAlertDialog" parent="@android:style/Theme.Dialog.Alert"> 
 		<item name="android:background">#454545</item> <item name="android:windowBackground">@drawable/background</item> 
-		<item name="android:popupBackground">@drawable/background</item> </style
+		<item name="android:popupBackground">@drawable/background</item> </style
+
+
+
+
+
+
+
+
+
     -->
 
     <style name="shadowTextWhite">

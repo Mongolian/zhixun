@@ -1,7 +1,5 @@
 package com.iory.zhixun.data;
 
-import android.R.integer;
-
 public class NewsItem {
 	
 	public int id ;

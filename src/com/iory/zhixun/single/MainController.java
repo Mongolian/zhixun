@@ -3,7 +3,6 @@ package com.iory.zhixun.single;
 import android.graphics.Bitmap;
 import android.os.Handler;
 import android.widget.ImageView;
-
 import com.iory.zhixun.R;
 import com.iory.zhixun.app.DLApp;
 import com.iory.zhixun.app.TLog;
