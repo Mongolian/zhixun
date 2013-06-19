@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <TextView
+        android:id="@+id/source"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:text="www.qq.com" />
+
+    <TextView
+        android:id="@+id/data"
+        android:layout_width="70dp"
+        android:layout_height="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/personal_row_data_bg"
+        android:gravity="center"
+        android:text="2013-5-21"
+        android:textColor="@color/white"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/source"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="聚合信息，一起来搞死余舅子吧大家一起来哈哈哈"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/fav_icon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignRight="@+id/data"
+        android:layout_alignTop="@+id/title"
+        android:src="@drawable/fav_icon" />
+
+</RelativeLayout>
