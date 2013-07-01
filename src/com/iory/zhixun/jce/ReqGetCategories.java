@@ -6,21 +6,19 @@
 
 package com.iory.zhixun.jce;
 
-public final class ReqGetNewsContent extends com.qq.taf.jce.JceStruct implements java.lang.Cloneable
+public final class ReqGetCategories extends com.qq.taf.jce.JceStruct implements java.lang.Cloneable
 {
     public String className()
     {
-        return "zhi_xun.ReqGetNewsContent";
+        return "zhi_xun.ReqGetCategories";
     }
 
     public String fullClassName()
     {
-        return "zhi_xun.ReqGetNewsContent";
+        return "zhi_xun.ReqGetCategories";
     }
 
     public com.iory.zhixun.jce.SessionInfo sessionInfo = null;
-
-    public int newsId = 0;
 
     public com.iory.zhixun.jce.SessionInfo getSessionInfo()
     {
@@ -32,24 +30,13 @@ public final class ReqGetNewsContent extends com.qq.taf.jce.JceStruct implements
         this.sessionInfo = sessionInfo;
     }
 
-    public int getNewsId()
-    {
-        return newsId;
-    }
-
-    public void  setNewsId(int newsId)
-    {
-        this.newsId = newsId;
-    }
-
-    public ReqGetNewsContent()
+    public ReqGetCategories()
     {
     }
 
-    public ReqGetNewsContent(com.iory.zhixun.jce.SessionInfo sessionInfo, int newsId)
+    public ReqGetCategories(com.iory.zhixun.jce.SessionInfo sessionInfo)
     {
         this.sessionInfo = sessionInfo;
-        this.newsId = newsId;
     }
 
     public boolean equals(Object o)
@@ -59,10 +46,9 @@ public final class ReqGetNewsContent extends com.qq.taf.jce.JceStruct implements
             return false;
         }
 
-        ReqGetNewsContent t = (ReqGetNewsContent) o;
+        ReqGetCategories t = (ReqGetCategories) o;
         return (
-            com.qq.taf.jce.JceUtil.equals(sessionInfo, t.sessionInfo) && 
-            com.qq.taf.jce.JceUtil.equals(newsId, t.newsId) );
+            com.qq.taf.jce.JceUtil.equals(sessionInfo, t.sessionInfo) );
     }
 
     public int hashCode()
@@ -94,7 +80,6 @@ public final class ReqGetNewsContent extends com.qq.taf.jce.JceStruct implements
     public void writeTo(com.qq.taf.jce.JceOutputStream _os)
     {
         _os.write(sessionInfo, 0);
-        _os.write(newsId, 1);
     }
 
     static com.iory.zhixun.jce.SessionInfo cache_sessionInfo;
@@ -106,14 +91,12 @@ public final class ReqGetNewsContent extends com.qq.taf.jce.JceStruct implements
             cache_sessionInfo = new com.iory.zhixun.jce.SessionInfo();
         }
         this.sessionInfo = (com.iory.zhixun.jce.SessionInfo) _is.read(cache_sessionInfo, 0, true);
-        this.newsId = (int) _is.read(newsId, 1, true);
     }
 
     public void display(java.lang.StringBuilder _os, int _level)
     {
         com.qq.taf.jce.JceDisplayer _ds = new com.qq.taf.jce.JceDisplayer(_os, _level);
         _ds.display(sessionInfo, "sessionInfo");
-        _ds.display(newsId, "newsId");
     }
 
 }

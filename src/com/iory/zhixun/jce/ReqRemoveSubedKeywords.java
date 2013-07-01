@@ -6,21 +6,21 @@
 
 package com.iory.zhixun.jce;
 
-public final class ReqGetNewsContent extends com.qq.taf.jce.JceStruct implements java.lang.Cloneable
+public final class ReqRemoveSubedKeywords extends com.qq.taf.jce.JceStruct implements java.lang.Cloneable
 {
     public String className()
     {
-        return "zhi_xun.ReqGetNewsContent";
+        return "com.iory.zhixun.jce.ReqRemoveSubedKeywords";
     }
 
     public String fullClassName()
     {
-        return "zhi_xun.ReqGetNewsContent";
+        return "com.iory.zhixun.jce.ReqRemoveSubedKeywords";
     }
 
     public com.iory.zhixun.jce.SessionInfo sessionInfo = null;
 
-    public int newsId = 0;
+    public java.util.ArrayList<String> keywords = null;
 
     public com.iory.zhixun.jce.SessionInfo getSessionInfo()
     {
@@ -32,24 +32,24 @@ public final class ReqGetNewsContent extends com.qq.taf.jce.JceStruct implements
         this.sessionInfo = sessionInfo;
     }
 
-    public int getNewsId()
+    public java.util.ArrayList<String> getKeywords()
     {
-        return newsId;
+        return keywords;
     }
 
-    public void  setNewsId(int newsId)
+    public void  setKeywords(java.util.ArrayList<String> keywords)
     {
-        this.newsId = newsId;
+        this.keywords = keywords;
     }
 
-    public ReqGetNewsContent()
+    public ReqRemoveSubedKeywords()
     {
     }
 
-    public ReqGetNewsContent(com.iory.zhixun.jce.SessionInfo sessionInfo, int newsId)
+    public ReqRemoveSubedKeywords(com.iory.zhixun.jce.SessionInfo sessionInfo, java.util.ArrayList<String> keywords)
     {
         this.sessionInfo = sessionInfo;
-        this.newsId = newsId;
+        this.keywords = keywords;
     }
 
     public boolean equals(Object o)
@@ -59,10 +59,10 @@ public final class ReqGetNewsContent extends com.qq.taf.jce.JceStruct implements
             return false;
         }
 
-        ReqGetNewsContent t = (ReqGetNewsContent) o;
+        ReqRemoveSubedKeywords t = (ReqRemoveSubedKeywords) o;
         return (
             com.qq.taf.jce.JceUtil.equals(sessionInfo, t.sessionInfo) && 
-            com.qq.taf.jce.JceUtil.equals(newsId, t.newsId) );
+            com.qq.taf.jce.JceUtil.equals(keywords, t.keywords) );
     }
 
     public int hashCode()
@@ -94,10 +94,11 @@ public final class ReqGetNewsContent extends com.qq.taf.jce.JceStruct implements
     public void writeTo(com.qq.taf.jce.JceOutputStream _os)
     {
         _os.write(sessionInfo, 0);
-        _os.write(newsId, 1);
+        _os.write(keywords, 1);
     }
 
     static com.iory.zhixun.jce.SessionInfo cache_sessionInfo;
+    static java.util.ArrayList<String> cache_keywords;
 
     public void readFrom(com.qq.taf.jce.JceInputStream _is)
     {
@@ -106,14 +107,20 @@ public final class ReqGetNewsContent extends com.qq.taf.jce.JceStruct implements
             cache_sessionInfo = new com.iory.zhixun.jce.SessionInfo();
         }
         this.sessionInfo = (com.iory.zhixun.jce.SessionInfo) _is.read(cache_sessionInfo, 0, true);
-        this.newsId = (int) _is.read(newsId, 1, true);
+        if(null == cache_keywords)
+        {
+            cache_keywords = new java.util.ArrayList<String>();
+            String __var_8 = "";
+            ((java.util.ArrayList<String>)cache_keywords).add(__var_8);
+        }
+        this.keywords = (java.util.ArrayList<String>) _is.read(cache_keywords, 1, true);
     }
 
     public void display(java.lang.StringBuilder _os, int _level)
     {
         com.qq.taf.jce.JceDisplayer _ds = new com.qq.taf.jce.JceDisplayer(_os, _level);
         _ds.display(sessionInfo, "sessionInfo");
-        _ds.display(newsId, "newsId");
+        _ds.display(keywords, "keywords");
     }
 
 }

@@ -6,16 +6,16 @@
 
 package com.iory.zhixun.jce;
 
-public final class ReqGetNewsContent extends com.qq.taf.jce.JceStruct implements java.lang.Cloneable
+public final class RepRemoveCollectNews extends com.qq.taf.jce.JceStruct implements java.lang.Cloneable
 {
     public String className()
     {
-        return "zhi_xun.ReqGetNewsContent";
+        return "zhi_xun.RepRemoveCollectNews";
     }
 
     public String fullClassName()
     {
-        return "zhi_xun.ReqGetNewsContent";
+        return "zhi_xun.RepRemoveCollectNews";
     }
 
     public com.iory.zhixun.jce.SessionInfo sessionInfo = null;
@@ -42,11 +42,11 @@ public final class ReqGetNewsContent extends com.qq.taf.jce.JceStruct implements
         this.newsId = newsId;
     }
 
-    public ReqGetNewsContent()
+    public RepRemoveCollectNews()
     {
     }
 
-    public ReqGetNewsContent(com.iory.zhixun.jce.SessionInfo sessionInfo, int newsId)
+    public RepRemoveCollectNews(com.iory.zhixun.jce.SessionInfo sessionInfo, int newsId)
     {
         this.sessionInfo = sessionInfo;
         this.newsId = newsId;
@@ -59,7 +59,7 @@ public final class ReqGetNewsContent extends com.qq.taf.jce.JceStruct implements
             return false;
         }
 
-        ReqGetNewsContent t = (ReqGetNewsContent) o;
+        RepRemoveCollectNews t = (RepRemoveCollectNews) o;
         return (
             com.qq.taf.jce.JceUtil.equals(sessionInfo, t.sessionInfo) && 
             com.qq.taf.jce.JceUtil.equals(newsId, t.newsId) );

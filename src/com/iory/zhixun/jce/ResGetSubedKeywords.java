@@ -6,30 +6,30 @@
 
 package com.iory.zhixun.jce;
 
-public final class ReqSubKeywords extends com.qq.taf.jce.JceStruct implements java.lang.Cloneable
+public final class ResGetSubedKeywords extends com.qq.taf.jce.JceStruct implements java.lang.Cloneable
 {
     public String className()
     {
-        return "com.iory.zhixun.jce.ReqSubKeywords";
+        return "com.iory.zhixun.jce.ResGetSubedKeywords";
     }
 
     public String fullClassName()
     {
-        return "com.iory.zhixun.jce.ReqSubKeywords";
+        return "com.iory.zhixun.jce.ResGetSubedKeywords";
     }
 
-    public com.iory.zhixun.jce.SessionInfo sessionInfo = null;
+    public int code = 0;
 
     public java.util.ArrayList<String> keywords = null;
 
-    public com.iory.zhixun.jce.SessionInfo getSessionInfo()
+    public int getCode()
     {
-        return sessionInfo;
+        return code;
     }
 
-    public void  setSessionInfo(com.iory.zhixun.jce.SessionInfo sessionInfo)
+    public void  setCode(int code)
     {
-        this.sessionInfo = sessionInfo;
+        this.code = code;
     }
 
     public java.util.ArrayList<String> getKeywords()
@@ -42,13 +42,13 @@ public final class ReqSubKeywords extends com.qq.taf.jce.JceStruct implements ja
         this.keywords = keywords;
     }
 
-    public ReqSubKeywords()
+    public ResGetSubedKeywords()
     {
     }
 
-    public ReqSubKeywords(com.iory.zhixun.jce.SessionInfo sessionInfo, java.util.ArrayList<String> keywords)
+    public ResGetSubedKeywords(int code, java.util.ArrayList<String> keywords)
     {
-        this.sessionInfo = sessionInfo;
+        this.code = code;
         this.keywords = keywords;
     }
 
@@ -59,9 +59,9 @@ public final class ReqSubKeywords extends com.qq.taf.jce.JceStruct implements ja
             return false;
         }
 
-        ReqSubKeywords t = (ReqSubKeywords) o;
+        ResGetSubedKeywords t = (ResGetSubedKeywords) o;
         return (
-            com.qq.taf.jce.JceUtil.equals(sessionInfo, t.sessionInfo) && 
+            com.qq.taf.jce.JceUtil.equals(code, t.code) && 
             com.qq.taf.jce.JceUtil.equals(keywords, t.keywords) );
     }
 
@@ -93,25 +93,20 @@ public final class ReqSubKeywords extends com.qq.taf.jce.JceStruct implements ja
 
     public void writeTo(com.qq.taf.jce.JceOutputStream _os)
     {
-        _os.write(sessionInfo, 0);
+        _os.write(code, 0);
         _os.write(keywords, 1);
     }
 
-    static com.iory.zhixun.jce.SessionInfo cache_sessionInfo;
     static java.util.ArrayList<String> cache_keywords;
 
     public void readFrom(com.qq.taf.jce.JceInputStream _is)
     {
-        if(null == cache_sessionInfo)
-        {
-            cache_sessionInfo = new com.iory.zhixun.jce.SessionInfo();
-        }
-        this.sessionInfo = (com.iory.zhixun.jce.SessionInfo) _is.read(cache_sessionInfo, 0, true);
+        this.code = (int) _is.read(code, 0, true);
         if(null == cache_keywords)
         {
             cache_keywords = new java.util.ArrayList<String>();
-            String __var_6 = "";
-            ((java.util.ArrayList<String>)cache_keywords).add(__var_6);
+            String __var_7 = "";
+            ((java.util.ArrayList<String>)cache_keywords).add(__var_7);
         }
         this.keywords = (java.util.ArrayList<String>) _is.read(cache_keywords, 1, true);
     }
@@ -119,7 +114,7 @@ public final class ReqSubKeywords extends com.qq.taf.jce.JceStruct implements ja
     public void display(java.lang.StringBuilder _os, int _level)
     {
         com.qq.taf.jce.JceDisplayer _ds = new com.qq.taf.jce.JceDisplayer(_os, _level);
-        _ds.display(sessionInfo, "sessionInfo");
+        _ds.display(code, "code");
         _ds.display(keywords, "keywords");
     }
 

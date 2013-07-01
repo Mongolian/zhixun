@@ -6,16 +6,16 @@
 
 package com.iory.zhixun.jce;
 
-public final class ResCollectNews extends com.qq.taf.jce.JceStruct implements java.lang.Cloneable
+public final class ResRemoveSubedKeywords extends com.qq.taf.jce.JceStruct implements java.lang.Cloneable
 {
     public String className()
     {
-        return "com.iory.zhixun.jce.ResCollectNews";
+        return "com.iory.zhixun.jce.ResRemoveSubedKeywords";
     }
 
     public String fullClassName()
     {
-        return "com.iory.zhixun.jce.ResCollectNews";
+        return "com.iory.zhixun.jce.ResRemoveSubedKeywords";
     }
 
     public int code = 0;
@@ -30,11 +30,11 @@ public final class ResCollectNews extends com.qq.taf.jce.JceStruct implements ja
         this.code = code;
     }
 
-    public ResCollectNews()
+    public ResRemoveSubedKeywords()
     {
     }
 
-    public ResCollectNews(int code)
+    public ResRemoveSubedKeywords(int code)
     {
         this.code = code;
     }
@@ -46,7 +46,7 @@ public final class ResCollectNews extends com.qq.taf.jce.JceStruct implements ja
             return false;
         }
 
-        ResCollectNews t = (ResCollectNews) o;
+        ResRemoveSubedKeywords t = (ResRemoveSubedKeywords) o;
         return (
             com.qq.taf.jce.JceUtil.equals(code, t.code) );
     }

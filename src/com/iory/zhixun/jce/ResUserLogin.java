@@ -6,21 +6,31 @@
 
 package com.iory.zhixun.jce;
 
-public final class ReqGetNewsContent extends com.qq.taf.jce.JceStruct implements java.lang.Cloneable
+public final class ResUserLogin extends com.qq.taf.jce.JceStruct implements java.lang.Cloneable
 {
     public String className()
     {
-        return "zhi_xun.ReqGetNewsContent";
+        return "com.iory.zhixun.jce.ResUserLogin";
     }
 
     public String fullClassName()
     {
-        return "zhi_xun.ReqGetNewsContent";
+        return "com.iory.zhixun.jce.ResUserLogin";
     }
+
+    public int code = 0;
 
     public com.iory.zhixun.jce.SessionInfo sessionInfo = null;
 
-    public int newsId = 0;
+    public int getCode()
+    {
+        return code;
+    }
+
+    public void  setCode(int code)
+    {
+        this.code = code;
+    }
 
     public com.iory.zhixun.jce.SessionInfo getSessionInfo()
     {
@@ -32,24 +42,14 @@ public final class ReqGetNewsContent extends com.qq.taf.jce.JceStruct implements
         this.sessionInfo = sessionInfo;
     }
 
-    public int getNewsId()
-    {
-        return newsId;
-    }
-
-    public void  setNewsId(int newsId)
-    {
-        this.newsId = newsId;
-    }
-
-    public ReqGetNewsContent()
+    public ResUserLogin()
     {
     }
 
-    public ReqGetNewsContent(com.iory.zhixun.jce.SessionInfo sessionInfo, int newsId)
+    public ResUserLogin(int code, com.iory.zhixun.jce.SessionInfo sessionInfo)
     {
+        this.code = code;
         this.sessionInfo = sessionInfo;
-        this.newsId = newsId;
     }
 
     public boolean equals(Object o)
@@ -59,10 +59,10 @@ public final class ReqGetNewsContent extends com.qq.taf.jce.JceStruct implements
             return false;
         }
 
-        ReqGetNewsContent t = (ReqGetNewsContent) o;
+        ResUserLogin t = (ResUserLogin) o;
         return (
-            com.qq.taf.jce.JceUtil.equals(sessionInfo, t.sessionInfo) && 
-            com.qq.taf.jce.JceUtil.equals(newsId, t.newsId) );
+            com.qq.taf.jce.JceUtil.equals(code, t.code) && 
+            com.qq.taf.jce.JceUtil.equals(sessionInfo, t.sessionInfo) );
     }
 
     public int hashCode()
@@ -93,27 +93,27 @@ public final class ReqGetNewsContent extends com.qq.taf.jce.JceStruct implements
 
     public void writeTo(com.qq.taf.jce.JceOutputStream _os)
     {
-        _os.write(sessionInfo, 0);
-        _os.write(newsId, 1);
+        _os.write(code, 0);
+        _os.write(sessionInfo, 1);
     }
 
     static com.iory.zhixun.jce.SessionInfo cache_sessionInfo;
 
     public void readFrom(com.qq.taf.jce.JceInputStream _is)
     {
+        this.code = (int) _is.read(code, 0, true);
         if(null == cache_sessionInfo)
         {
             cache_sessionInfo = new com.iory.zhixun.jce.SessionInfo();
         }
-        this.sessionInfo = (com.iory.zhixun.jce.SessionInfo) _is.read(cache_sessionInfo, 0, true);
-        this.newsId = (int) _is.read(newsId, 1, true);
+        this.sessionInfo = (com.iory.zhixun.jce.SessionInfo) _is.read(cache_sessionInfo, 1, true);
     }
 
     public void display(java.lang.StringBuilder _os, int _level)
     {
         com.qq.taf.jce.JceDisplayer _ds = new com.qq.taf.jce.JceDisplayer(_os, _level);
+        _ds.display(code, "code");
         _ds.display(sessionInfo, "sessionInfo");
-        _ds.display(newsId, "newsId");
     }
 
 }

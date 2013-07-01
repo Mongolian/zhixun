@@ -6,37 +6,50 @@
 
 package com.iory.zhixun.jce;
 
-public final class ResCollectNews extends com.qq.taf.jce.JceStruct implements java.lang.Cloneable
+public final class SessionInfo extends com.qq.taf.jce.JceStruct implements java.lang.Cloneable
 {
     public String className()
     {
-        return "com.iory.zhixun.jce.ResCollectNews";
+        return "com.iory.zhixun.jce.SessionInfo";
     }
 
     public String fullClassName()
     {
-        return "com.iory.zhixun.jce.ResCollectNews";
+        return "com.iory.zhixun.jce.SessionInfo";
     }
 
-    public int code = 0;
+    public int userId = 0;
 
-    public int getCode()
+    public String sid = "";
+
+    public int getUserId()
     {
-        return code;
+        return userId;
     }
 
-    public void  setCode(int code)
+    public void  setUserId(int userId)
     {
-        this.code = code;
+        this.userId = userId;
     }
 
-    public ResCollectNews()
+    public String getSid()
+    {
+        return sid;
+    }
+
+    public void  setSid(String sid)
+    {
+        this.sid = sid;
+    }
+
+    public SessionInfo()
     {
     }
 
-    public ResCollectNews(int code)
+    public SessionInfo(int userId, String sid)
     {
-        this.code = code;
+        this.userId = userId;
+        this.sid = sid;
     }
 
     public boolean equals(Object o)
@@ -46,9 +59,10 @@ public final class ResCollectNews extends com.qq.taf.jce.JceStruct implements ja
             return false;
         }
 
-        ResCollectNews t = (ResCollectNews) o;
+        SessionInfo t = (SessionInfo) o;
         return (
-            com.qq.taf.jce.JceUtil.equals(code, t.code) );
+            com.qq.taf.jce.JceUtil.equals(userId, t.userId) && 
+            com.qq.taf.jce.JceUtil.equals(sid, t.sid) );
     }
 
     public int hashCode()
@@ -79,19 +93,22 @@ public final class ResCollectNews extends com.qq.taf.jce.JceStruct implements ja
 
     public void writeTo(com.qq.taf.jce.JceOutputStream _os)
     {
-        _os.write(code, 0);
+        _os.write(userId, 0);
+        _os.write(sid, 1);
     }
 
 
     public void readFrom(com.qq.taf.jce.JceInputStream _is)
     {
-        this.code = (int) _is.read(code, 0, true);
+        this.userId = (int) _is.read(userId, 0, true);
+        this.sid =  _is.readString(1, true);
     }
 
     public void display(java.lang.StringBuilder _os, int _level)
     {
         com.qq.taf.jce.JceDisplayer _ds = new com.qq.taf.jce.JceDisplayer(_os, _level);
-        _ds.display(code, "code");
+        _ds.display(userId, "userId");
+        _ds.display(sid, "sid");
     }
 
 }

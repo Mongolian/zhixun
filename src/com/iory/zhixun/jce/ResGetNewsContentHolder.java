@@ -6,15 +6,15 @@
 
 package com.iory.zhixun.jce;
 
-public final class RepCollectNewsHolder
+public final class ResGetNewsContentHolder
 {
-    public RepCollectNewsHolder()
+    public ResGetNewsContentHolder()
     {
     }
-    public RepCollectNewsHolder(RepCollectNews value)
+    public ResGetNewsContentHolder(ResGetNewsContent value)
     {
         this.value = value;
     }
 
-    public RepCollectNews value;
+    public ResGetNewsContent value;
 }

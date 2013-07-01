@@ -6,15 +6,15 @@
 
 package com.iory.zhixun.jce;
 
-public final class RepCollectNewsHolder
+public final class ReqUserLoginHolder
 {
-    public RepCollectNewsHolder()
+    public ReqUserLoginHolder()
     {
     }
-    public RepCollectNewsHolder(RepCollectNews value)
+    public ReqUserLoginHolder(ReqUserLogin value)
     {
         this.value = value;
     }
 
-    public RepCollectNews value;
+    public ReqUserLogin value;
 }

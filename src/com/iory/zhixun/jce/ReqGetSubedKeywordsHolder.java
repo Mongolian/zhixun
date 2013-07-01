@@ -6,15 +6,15 @@
 
 package com.iory.zhixun.jce;
 
-public final class RepCollectNewsHolder
+public final class ReqGetSubedKeywordsHolder
 {
-    public RepCollectNewsHolder()
+    public ReqGetSubedKeywordsHolder()
     {
     }
-    public RepCollectNewsHolder(RepCollectNews value)
+    public ReqGetSubedKeywordsHolder(ReqGetSubedKeywords value)
     {
         this.value = value;
     }
 
-    public RepCollectNews value;
+    public ReqGetSubedKeywords value;
 }

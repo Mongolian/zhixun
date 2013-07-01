@@ -4,17 +4,9 @@
 // Generated from `zx.jce'
 // **********************************************************************
 
-package com.iory.zhixun.jce;
+package com.iory.zhixun.jce.cnst;
 
-public final class RepCollectNewsHolder
+public interface CODE_SRV_FAIL
 {
-    public RepCollectNewsHolder()
-    {
-    }
-    public RepCollectNewsHolder(RepCollectNews value)
-    {
-        this.value = value;
-    }
-
-    public RepCollectNews value;
+    int value = -1;
 }

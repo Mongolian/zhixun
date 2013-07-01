@@ -6,19 +6,21 @@
 
 package com.iory.zhixun.jce;
 
-public final class ResCollectNews extends com.qq.taf.jce.JceStruct implements java.lang.Cloneable
+public final class ResGetNewsContent extends com.qq.taf.jce.JceStruct implements java.lang.Cloneable
 {
     public String className()
     {
-        return "com.iory.zhixun.jce.ResCollectNews";
+        return "com.iory.zhixun.jce.ResGetNewsContent";
     }
 
     public String fullClassName()
     {
-        return "com.iory.zhixun.jce.ResCollectNews";
+        return "com.iory.zhixun.jce.ResGetNewsContent";
     }
 
     public int code = 0;
+
+    public com.iory.zhixun.jce.ClientNewsContent content = null;
 
     public int getCode()
     {
@@ -30,13 +32,24 @@ public final class ResCollectNews extends com.qq.taf.jce.JceStruct implements ja
         this.code = code;
     }
 
-    public ResCollectNews()
+    public com.iory.zhixun.jce.ClientNewsContent getContent()
+    {
+        return content;
+    }
+
+    public void  setContent(com.iory.zhixun.jce.ClientNewsContent content)
+    {
+        this.content = content;
+    }
+
+    public ResGetNewsContent()
     {
     }
 
-    public ResCollectNews(int code)
+    public ResGetNewsContent(int code, com.iory.zhixun.jce.ClientNewsContent content)
     {
         this.code = code;
+        this.content = content;
     }
 
     public boolean equals(Object o)
@@ -46,9 +59,10 @@ public final class ResCollectNews extends com.qq.taf.jce.JceStruct implements ja
             return false;
         }
 
-        ResCollectNews t = (ResCollectNews) o;
+        ResGetNewsContent t = (ResGetNewsContent) o;
         return (
-            com.qq.taf.jce.JceUtil.equals(code, t.code) );
+            com.qq.taf.jce.JceUtil.equals(code, t.code) && 
+            com.qq.taf.jce.JceUtil.equals(content, t.content) );
     }
 
     public int hashCode()
@@ -80,18 +94,26 @@ public final class ResCollectNews extends com.qq.taf.jce.JceStruct implements ja
     public void writeTo(com.qq.taf.jce.JceOutputStream _os)
     {
         _os.write(code, 0);
+        _os.write(content, 1);
     }
 
+    static com.iory.zhixun.jce.ClientNewsContent cache_content;
 
     public void readFrom(com.qq.taf.jce.JceInputStream _is)
     {
         this.code = (int) _is.read(code, 0, true);
+        if(null == cache_content)
+        {
+            cache_content = new com.iory.zhixun.jce.ClientNewsContent();
+        }
+        this.content = (com.iory.zhixun.jce.ClientNewsContent) _is.read(cache_content, 1, true);
     }
 
     public void display(java.lang.StringBuilder _os, int _level)
     {
         com.qq.taf.jce.JceDisplayer _ds = new com.qq.taf.jce.JceDisplayer(_os, _level);
         _ds.display(code, "code");
+        _ds.display(content, "content");
     }
 
 }
