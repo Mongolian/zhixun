@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 	
+    
+    <dimen name="top_bar_height">60dp</dimen>
     <dimen name="bottom_bar_icon_margin">25dp</dimen>
     <dimen name="bottom_bar_height">50dp</dimen>
     <dimen name="strong_bt_text_position">-2dp</dimen>

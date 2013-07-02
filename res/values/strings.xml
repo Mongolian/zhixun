@@ -4,5 +4,6 @@
     <string name="app_name">知迅</string>
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
-
+    <string name="anctivity_waitinfo">获取列表中......</string>
+    <string name="list_waitting_getmore">获取更多</string>
 </resources>
