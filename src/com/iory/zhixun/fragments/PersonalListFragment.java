@@ -10,6 +10,7 @@ import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.ListFragment;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -30,8 +31,9 @@ import com.iory.zhixun.view.MoreListItem;
 import com.iory.zhixun.view.MoreListItem.IMoreDateListener;
 import com.iory.zhixun.net.LinkData;
 
-public class PersonalListFragment extends ListFragment {
+public class PersonalListFragment extends Fragment {
 	
+	com.iory.zhixun.view.ScollLockedListView mListView;
      MoreListItem mMoreListItemPersonalListPacker;
      LayoutInflater mInflater;
      PersonalListAdapter personalListAdapter;
@@ -48,11 +50,12 @@ public class PersonalListFragment extends ListFragment {
 //			adapter.add(new SampleItem("www.qq.com", "今天又个新闻，舅子被爆菊花了。",android.R.drawable.ic_menu_search));
 //		}
 		
+		mListView = (com.iory.zhixun.view.ScollLockedListView) (this.getView().findViewById(R.id.personal_list));
 		// 每日精选的脚部
 		View footer = mInflater.inflate(R.layout.list_waiting, null);
-		mMoreListItemPersonalListPacker = new MoreListItem(getListView(), footer, moreDateListener);
+		mMoreListItemPersonalListPacker = new MoreListItem(mListView, footer, moreDateListener);
 		// 添加adapter
-		setListAdapter(personalListAdapter);
+		mListView.setAdapter(personalListAdapter);
 	}
 	
 	
@@ -67,9 +70,8 @@ public class PersonalListFragment extends ListFragment {
 			if (scrollState == OnScrollListener.SCROLL_STATE_IDLE) {
 			//MainLogicController.getInstance().requestPindingIcon();
 			}
-			personalListAdapter.isScrollStateIdle = (scrollState == OnScrollListener.SCROLL_STATE_IDLE);
-/*			switch (view.getId()) {
-			case R.id.listview_recommend_daily_pick: {
+			switch (view.getId()) {
+			case R.id.personal_list :{
 				// 获取每日精选
 				personalListAdapter.isScrollStateIdle = (scrollState == OnScrollListener.SCROLL_STATE_IDLE);
 			}
@@ -80,17 +82,17 @@ public class PersonalListFragment extends ListFragment {
 			// == OnScrollListener.SCROLL_STATE_IDLE);
 			// }
 			// break;
-			case R.id.ListView_ontop_by_score: {
+/*			case R.id.ListView_ontop_by_score: {
 				// 获取新品上架(OnTop)评分榜
 				onTopScoreListAdapter.isScrollStateIdle = (scrollState == OnScrollListener.SCROLL_STATE_IDLE);
 				if (onTopScoreListAdapter.isScrollStateIdle) {
 					// onTopScoreListAdapter.notifyDataSetChanged();
 				}
 			}
-				break;
+				break;*/
 			default:
 				break;
-			}*/
+			}
 		}
 		
 		@Override
