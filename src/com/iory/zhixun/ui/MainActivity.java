@@ -2,9 +2,12 @@ package com.iory.zhixun.ui;
 
 
 import android.os.Bundle;
+
 import com.iory.zhixun.R;
 import com.iory.zhixun.fragments.ColorFragment;
 import com.iory.zhixun.slidingmenu.lib.SlidingMenu;
+
+import static com.iory.zhixun.slidingmenu.lib.SlidingMenu.*;
 
 
 public class MainActivity extends BaseActivity {
@@ -16,7 +19,7 @@ public class MainActivity extends BaseActivity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		getSlidingMenu().setMode(SlidingMenu.LEFT_RIGHT);
+		getSlidingMenu().setMode(LEFT_RIGHT);
 		getSlidingMenu().setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
 		
 		setContentView(R.layout.content_frame);
