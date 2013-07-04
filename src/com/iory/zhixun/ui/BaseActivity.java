@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.support.v4.app.*;
 import android.support.v4.view.ViewPager;
 import com.iory.zhixun.R;
-import com.iory.zhixun.fragments.SampleListFragment;
+import com.iory.zhixun.fragments.LeftPanelListFragment;
 import com.iory.zhixun.slidingmenu.lib.SlidingFragmentActivity;
 import com.iory.zhixun.slidingmenu.lib.SlidingMenu;
 
@@ -30,7 +30,7 @@ public class BaseActivity extends SlidingFragmentActivity {
 		// set the Behind View
 		setBehindContentView(R.layout.menu_frame);
 		FragmentTransaction t = this.getSupportFragmentManager().beginTransaction();
-		mFrag = new SampleListFragment();
+		mFrag = new LeftPanelListFragment();
 		t.replace(R.id.menu_frame, mFrag);
 		t.commit();
 
@@ -73,7 +73,7 @@ public class BaseActivity extends SlidingFragmentActivity {
 			mPager = vp;
 			mPager.setAdapter(this);
 			for (int i = 0; i < 3; i++) {
-				addTab(new SampleListFragment());
+				addTab(new LeftPanelListFragment());
 			}
 		}
 
