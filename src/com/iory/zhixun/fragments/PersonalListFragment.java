@@ -20,7 +20,12 @@ import android.support.v4.app.ListFragment;
 import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.View.OnTouchListener;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.view.animation.Animation.AnimationListener;
 import android.view.ViewGroup;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
@@ -65,6 +70,49 @@ public class PersonalListFragment extends Fragment {
  	
  	private Map<Integer, PersonalListAdapter> adapterMap = new HashMap<Integer, PersonalListAdapter>();
  	private int currentKindId = -1;
+ 	
+ 	float x , y , upx, upy;
+ 	OnTouchListener onTouchListener = new OnTouchListener() {
+		
+		@Override
+		public boolean onTouch(View v, MotionEvent event) {
+			if (event.getAction() == MotionEvent.ACTION_DOWN) {   
+	            x = event.getX();   
+	            y = event.getY();               
+	        }   
+	        if (event.getAction() == MotionEvent.ACTION_UP) {   
+	            upx = event.getX();   
+	            upy = event.getY();   
+	            int position1 = ((ListView) v).pointToPosition((int) x, (int) y);   
+	            int position2 = ((ListView) v).pointToPosition((int) upx,(int) upy);               
+	            int FirstVisiblePosition = mListView.getFirstVisiblePosition();               
+	            if (position1 == position2 && Math.abs(x - upx) > 10) {   
+	                View view = ((ListView) v).getChildAt(position1);                   
+	                if (view == null) {                    
+	                 view = ((ListView) v).getChildAt(position1 - FirstVisiblePosition);  
+	                }                   
+	                removeListItem(view, position1);   
+	            }   
+	        }   
+	      
+	    return false;  
+		}
+	};
+	
+	protected void removeListItem(View rowView, final int positon) {        
+        final Animation animation = (Animation) AnimationUtils.loadAnimation(rowView.getContext(), R.anim.push_left_in); 
+        animation.setAnimationListener(new AnimationListener() { 
+            public void onAnimationStart(Animation animation) {} 
+            public void onAnimationRepeat(Animation animation) {} 
+            public void onAnimationEnd(Animation animation) { 
+//                mData.remove(positon); 
+//                mAdapter.notifyDataSetChanged(); 
+               //  animation.cancel(); 
+            } 
+        }); 
+         
+        rowView.startAnimation(animation); 
+    }
  			
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		mInflater = inflater;
@@ -183,7 +231,7 @@ public class PersonalListFragment extends Fragment {
 	
 	private void initList(){
 		
-	personalListAdapter = new PersonalListAdapter(getActivity(),2);
+	    personalListAdapter = new PersonalListAdapter(getActivity(),2);
 		
 		
 		
@@ -195,6 +243,7 @@ public class PersonalListFragment extends Fragment {
 		mListView.setAdapter(personalListAdapter);
 		currentKindId = 1;
 		adapterMap.put(1, personalListAdapter);
+		mListView.setOnTouchListener(onTouchListener);
 	}
 	
 	private IMoreDateListener moreDateListener = new IMoreDateListener() {
