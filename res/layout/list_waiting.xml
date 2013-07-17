@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/FrameLayout01"
+    android:layout_width="fill_parent"
+    android:layout_height="57dp"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout01"
+        android:layout_width="fill_parent"
+        android:layout_height="57dp"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal" >
+
+        <ProgressBar
+            android:id="@+id/ProgressBar01"
+            style="@style/progressBar_activity_wait"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true" >
+        </ProgressBar>
+
+        <TextView
+            android:id="@+id/TextView01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/ProgressBar01"
+            android:paddingLeft="10dip"
+            android:text="@string/anctivity_waitinfo"
+            android:textColor="@drawable/textgary"
+            android:textSize="14dip" >
+        </TextView>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/WaitingBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="57dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/normal_list_selector"
+        android:gravity="center"
+        android:text="@string/list_waitting_getmore"
+        android:textColor="@drawable/textgary"
+        android:textSize="16dip"
+        android:visibility="gone" />
+
+</FrameLayout>

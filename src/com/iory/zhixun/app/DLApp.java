@@ -1,10 +1,14 @@
 package com.iory.zhixun.app;
 
+import java.util.ArrayList;
+
+import com.iory.zhixun.jce.ClientNewsSummary;
 import android.app.Application;
 import android.content.Context;
 import android.os.Handler;
 import android.os.HandlerThread;
 import android.os.Looper;
+import android.widget.Toast;
 
 
 /**
@@ -69,6 +73,27 @@ public class DLApp extends Application {
 	public static void postRunnable(Runnable r) {
 		mHandler.post(r);
 	}
+	
+	// 过滤自已的software，检查icon地址
+	public static void newsFilter(ArrayList<ClientNewsSummary> totalList, final ArrayList<ClientNewsSummary> list) {
+			if (totalList == null || list == null) {
+				return;
+			}
+			ArrayList<ClientNewsSummary> alertList = null;
+			for (int i = 0; i < list.size(); i++) {
+				ClientNewsSummary news = list.get(i);
+					totalList.add(news);
+				// 图标地址检查
+//				if (TLog.isForDebug()) {
+//					if (alertList == null) {
+//						alertList = new ArrayList<Software>();
+//					}
+//					if (software.sLogoUrl == null || software.sLogoUrl.length() == 0 || !software.sLogoUrl.startsWith("http://")) {
+//						alertList.add(software);
+//					}
+//				}
+			}
+		}
 
 
 }
