@@ -2,6 +2,7 @@ package com.iory.zhixun.app;
 
 import java.util.ArrayList;
 
+import com.iory.zhixun.data.NewsKind;
 import com.iory.zhixun.jce.ClientNewsSummary;
 import android.app.Application;
 import android.content.Context;
@@ -92,6 +93,18 @@ public class DLApp extends Application {
 //						alertList.add(software);
 //					}
 //				}
+			}
+		}
+	
+	// 过滤自已的software，检查icon地址
+	public static void kindsFilter(ArrayList<NewsKind> totalList, final ArrayList<NewsKind> list) {
+			if (totalList == null || list == null) {
+				return;
+			}
+			ArrayList<NewsKind> alertList = null;
+			for (int i = 0; i < list.size(); i++) {
+				    NewsKind kind = list.get(i);
+					totalList.add(kind);
 			}
 		}
 

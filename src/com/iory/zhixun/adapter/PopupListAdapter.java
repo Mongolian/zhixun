@@ -4,9 +4,9 @@ import java.util.ArrayList;
 
 import com.iory.zhixun.R;
 import com.iory.zhixun.app.DLApp;
+import com.iory.zhixun.data.NewsKind;
 import com.iory.zhixun.jce.ClientNewsSummary;
 
-import android.R.integer;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,25 +15,25 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class PersonalListAdapter extends BaseAdapter {
+public class PopupListAdapter extends BaseAdapter {
 	private Context context;
-	private ArrayList<ClientNewsSummary> list = null;
-	private int kindId;
+	private ArrayList<NewsKind> list = null;
+	
 	// 列表是否已停止滑动
 	public boolean isScrollStateIdle = true;
 
-	public PersonalListAdapter(Context context ,int kindId) {
+	public PopupListAdapter(Context context) {
 		this.context = context;
-		this.kindId = kindId;
+		
 	}
 	
-	public void setListData(ArrayList<ClientNewsSummary> addlist) {
+	public void setListData(ArrayList<NewsKind> addlist) {
 		if (this.list == null) {
-			this.list = new ArrayList<ClientNewsSummary>();
+			this.list = new ArrayList<NewsKind>();
 		} else {
 			this.list.clear();
 		}
-		DLApp.newsFilter(this.list, addlist);
+		DLApp.kindsFilter(this.list, addlist);
 	}
 	
 	public void clearListData() {
@@ -42,11 +42,11 @@ public class PersonalListAdapter extends BaseAdapter {
 		}
 	}
 
-	public void addListData(ArrayList<ClientNewsSummary> addlist) {
+	public void addListData(ArrayList<NewsKind> addlist) {
 		if (this.list == null) {
-			this.list = new ArrayList<ClientNewsSummary>();
+			this.list = new ArrayList<NewsKind>();
 		}
-		DLApp.newsFilter(this.list, addlist);
+		DLApp.kindsFilter(this.list, addlist);
 	}
 	
 	
@@ -81,25 +81,23 @@ public class PersonalListAdapter extends BaseAdapter {
 		
 		View view = null;
 		if (convertView == null) {
-			view = LayoutInflater.from(context).inflate(R.layout.personal_row, null);
+			view = LayoutInflater.from(context).inflate(R.layout.popuplist_row, null);
 		} else {
 			view = convertView;
 		}
 		
 		if (list != null && position < list.size()) {
-			ClientNewsSummary item = list.get(position);
+			NewsKind item = list.get(position);
 
 			view.setTag(item);
 
 			ImageView icon = (ImageView) view
-					.findViewById(R.id.fav_icon);
+					.findViewById(R.id.icon);
 
-			// icon.setImageResource(getItem(position).favIconRes);
-			TextView source = (TextView) view.findViewById(R.id.source);
-			source.setText(item.link);
+			icon.setImageResource(item.iconId);
 
-			TextView title = (TextView) view.findViewById(R.id.title);
-			title.setText(item.title);
+			TextView title = (TextView) view.findViewById(R.id.name);
+			title.setText(item.kindName);
 		}
 		return view;
 	}
