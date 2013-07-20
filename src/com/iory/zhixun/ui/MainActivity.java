@@ -2,11 +2,10 @@ package com.iory.zhixun.ui;
 
 
 import android.os.Bundle;
-import android.view.Window;
+import android.widget.Toast;
 
 import com.iory.zhixun.R;
 import com.iory.zhixun.fragments.ColorFragment;
-import com.iory.zhixun.fragments.PersonalListFragment;
 import com.iory.zhixun.slidingmenu.lib.SlidingMenu;
 
 
@@ -19,14 +18,38 @@ public class MainActivity extends BaseActivity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		getSlidingMenu().setMode(SlidingMenu.LEFT_RIGHT);
-		getSlidingMenu().setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
-		
+		getSlidingMenu().setTouchModeAbove(SlidingMenu.TOUCHMODE_MARGIN);
+
+        getSlidingMenu().setOnClosedListener(new SlidingMenu.OnClosedListener() {
+            @Override
+            public void onClosed() {
+                Toast.makeText(MainActivity.this, "close", 0).show();
+            }
+        });
+        getSlidingMenu().setOnOpenListener(new SlidingMenu.OnOpenListener() {
+            @Override
+            public void onOpen() {
+                Toast.makeText(MainActivity.this, "open", 0).show();
+            }
+        });
+        getSlidingMenu().setOnOpenedListener(new SlidingMenu.OnOpenedListener() {
+            @Override
+            public void onOpened() {
+                Toast.makeText(MainActivity.this, "Opened", 0).show();
+            }
+        });
+        getSlidingMenu().setOnClosedListener(new SlidingMenu.OnClosedListener() {
+            @Override
+            public void onClosed() {
+                Toast.makeText(MainActivity.this, "Closed", 0).show();
+            }
+        });
+
 		setContentView(R.layout.content_frame);
 		getSupportFragmentManager()
 		.beginTransaction()
-		.replace(R.id.content_frame, new PersonalListFragment())
+		.replace(R.id.content_frame, new ColorFragment())
 		.commit();
 		
 		getSlidingMenu().setSecondaryMenu(R.layout.menu_frame_two);

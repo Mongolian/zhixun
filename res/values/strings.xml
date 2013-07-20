@@ -4,6 +4,17 @@
     <string name="app_name">知迅</string>
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
+    <string name="user_no_login">匿名用户</string>
+    <string name="user_login_tip">你可以用任何一种方式登录哦</string>
+    <string name="login_fav_label">收藏：</string>
+    <string name="left_user_label">标签：</string>
+    <string name="left_fav">收藏夹</string>
+    <string name="left_news">新闻</string>
+    <string name="left_person_subscibe">个人订阅</string>
+    <string name="left_setting">设置</string>
+    <string name="left_relate_account">设置</string>
+
     <string name="anctivity_waitinfo">获取列表中......</string>
     <string name="list_waitting_getmore">获取更多</string>
+
 </resources>
