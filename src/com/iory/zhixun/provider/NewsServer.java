@@ -1,27 +1,27 @@
-//package com.iory.zhixun.provider;
-//
-//
-//import java.util.List;
-//import java.util.Vector;
-//import java.util.regex.Matcher;
-//import java.util.regex.Pattern;
-//
-//
-//import android.content.ContentValues;
-//import android.content.Context;
-//import android.database.Cursor;
-//
-//import com.iory.zhixun.data.NewsItem;
-//
-//public class NewsServer {
-//
-//	private Context mContext;
-//
-//	public NewsServer(Context context) {
-//		this.mContext = NewsSqliteHelper.mcontext;
-//	}
-//
-//
+package com.iory.zhixun.provider;
+
+
+import java.util.List;
+import java.util.Vector;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+
+import android.content.ContentValues;
+import android.content.Context;
+import android.database.Cursor;
+
+import com.iory.zhixun.data.NewsItem;
+
+public class NewsServer {
+
+	private Context mContext;
+
+	public NewsServer(Context context) {
+		this.mContext = NewsSqliteHelper.mcontext;
+	}
+
+
 //
 //	/**
 //	 * insert CBin
@@ -135,11 +135,11 @@
 //			return false;
 //		}
 //	}
-//
-//	private static boolean isNum(String str) {
-//		Pattern p = Pattern.compile("^[\\s]*[0-9]+[\\s]*$");
-//		Matcher m = p.matcher(str);
-//		return m.matches();
-//	}
-//
-//}
+
+	private static boolean isNum(String str) {
+		Pattern p = Pattern.compile("^[\\s]*[0-9]+[\\s]*$");
+		Matcher m = p.matcher(str);
+		return m.matches();
+	}
+
+}
