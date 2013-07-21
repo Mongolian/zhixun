@@ -6,6 +6,7 @@ import android.widget.Toast;
 
 import com.iory.zhixun.R;
 import com.iory.zhixun.fragments.ColorFragment;
+import com.iory.zhixun.fragments.PersonalListFragment;
 import com.iory.zhixun.slidingmenu.lib.SlidingMenu;
 
 
@@ -49,7 +50,7 @@ public class MainActivity extends BaseActivity {
 		setContentView(R.layout.content_frame);
 		getSupportFragmentManager()
 		.beginTransaction()
-		.replace(R.id.content_frame, new ColorFragment())
+		.replace(R.id.content_frame, new PersonalListFragment())
 		.commit();
 		
 		getSlidingMenu().setSecondaryMenu(R.layout.menu_frame_two);
