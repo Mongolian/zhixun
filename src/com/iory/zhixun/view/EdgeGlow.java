@@ -26,6 +26,8 @@ import android.view.animation.Interpolator;
  * This class performs the glow effect used at the edges of scrollable widgets.
  * 
  */
+
+//Ã·Ωª≤‚ ‘
 public class EdgeGlow {
 	private static final String TAG = EdgeGlow.class.getName();
 
