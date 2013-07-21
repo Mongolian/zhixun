@@ -136,10 +136,10 @@ public class NewsServer {
 //		}
 //	}
 
-	private static boolean isNum(String str) {
-		Pattern p = Pattern.compile("^[\\s]*[0-9]+[\\s]*$");
-		Matcher m = p.matcher(str);
-		return m.matches();
-	}
+//	private static boolean isNum(String str) {
+//		Pattern p = Pattern.compile("^[\\s]*[0-9]+[\\s]*$");
+//		Matcher m = p.matcher(str);
+//		return m.matches();
+//	}
 
 }
