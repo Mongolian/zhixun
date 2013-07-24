@@ -26,6 +26,7 @@ import android.view.View.OnTouchListener;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.Animation.AnimationListener;
+import android.view.animation.TranslateAnimation;
 import android.view.ViewGroup;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
@@ -36,6 +37,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.PopupWindow;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.AbsListView.OnScrollListener;
 
@@ -86,12 +88,21 @@ public class PersonalListFragment extends Fragment {
 	            int position1 = ((ListView) v).pointToPosition((int) x, (int) y);   
 	            int position2 = ((ListView) v).pointToPosition((int) upx,(int) upy);               
 	            int FirstVisiblePosition = mListView.getFirstVisiblePosition();               
-	            if (position1 == position2 && Math.abs(x - upx) > 10) {   
+	            if (position1 == position2 ) {   
+	            	if( upx - x > 10){
 	                View view = ((ListView) v).getChildAt(position1);                   
 	                if (view == null) {                    
 	                 view = ((ListView) v).getChildAt(position1 - FirstVisiblePosition);  
 	                }                   
-	                removeListItem(view, position1);   
+	                moveActionBar(view, position1,true);   
+	            	}else  if(x-upx>10){
+	            		 View view = ((ListView) v).getChildAt(position1);                   
+	 	                if (view == null) {                    
+	 	                 view = ((ListView) v).getChildAt(position1 - FirstVisiblePosition);  
+	 	                }                   
+	 	                moveActionBar(view, position1,false);   
+	            		
+	            	}
 	            }   
 	        }   
 	      
@@ -99,8 +110,48 @@ public class PersonalListFragment extends Fragment {
 		}
 	};
 	
-	protected void removeListItem(View rowView, final int positon) {        
+	protected void moveActionBar(View rowView, final int positon , boolean isShow) {        
         final Animation animation = (Animation) AnimationUtils.loadAnimation(rowView.getContext(), R.anim.push_left_in); 
+        
+        final RelativeLayout actionBar =  (RelativeLayout)rowView.findViewById(R.id.actionbar1);
+        if(isShow){
+            actionBar.setVisibility(View.VISIBLE);
+            
+            //初始化
+              Animation translateAnimation = new TranslateAnimation(Tools.getPixFromDip(-270.0f, getActivity()),0.1f,0.1f,0.1f);
+             			translateAnimation.setDuration(500);
+             			
+             			actionBar.startAnimation(translateAnimation);
+        } else{
+        	
+        	 Animation translateAnimation = new TranslateAnimation(0.1f, Tools.getPixFromDip(-270.0f, getActivity()),0.1f,0.1f);
+  			translateAnimation.setDuration(500);
+  			
+  			actionBar.startAnimation(translateAnimation);
+  			
+  			translateAnimation.setAnimationListener(new AnimationListener() {
+				
+				@Override
+				public void onAnimationStart(Animation animation) {
+					// TODO Auto-generated method stub
+					
+				}
+				
+				@Override
+				public void onAnimationRepeat(Animation animation) {
+					// TODO Auto-generated method stub
+					
+				}
+				
+				@Override
+				public void onAnimationEnd(Animation animation) {
+					// TODO Auto-generated method stub
+					actionBar.setVisibility(View.GONE);
+				}
+			});
+        }
+
+        
         animation.setAnimationListener(new AnimationListener() { 
             public void onAnimationStart(Animation animation) {} 
             public void onAnimationRepeat(Animation animation) {} 
@@ -111,7 +162,7 @@ public class PersonalListFragment extends Fragment {
             } 
         }); 
          
-        rowView.startAnimation(animation); 
+   //       rowView.startAnimation(animation); 
     }
  			
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
