@@ -27,6 +27,7 @@ import android.view.animation.Interpolator;
  * 
  */
 
+//
 public class EdgeGlow {
 	private static final String TAG = EdgeGlow.class.getName();
 

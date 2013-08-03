@@ -26,6 +26,7 @@ import android.view.View.OnTouchListener;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.Animation.AnimationListener;
+import android.view.animation.TranslateAnimation;
 import android.view.ViewGroup;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
@@ -36,6 +37,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.PopupWindow;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.AbsListView.OnScrollListener;
 
@@ -72,46 +74,95 @@ public class PersonalListFragment extends Fragment {
  	private int currentKindId = -1;
  	
  	float x , y , upx, upy;
- 	OnTouchListener onTouchListener = new OnTouchListener() {
-		
+	OnTouchListener onTouchListener = new OnTouchListener() {
+
 		@Override
 		public boolean onTouch(View v, MotionEvent event) {
-			if (event.getAction() == MotionEvent.ACTION_DOWN) {   
-	            x = event.getX();   
-	            y = event.getY();               
-	        }   
-	        if (event.getAction() == MotionEvent.ACTION_UP) {   
-	            upx = event.getX();   
-	            upy = event.getY();   
-	            int position1 = ((ListView) v).pointToPosition((int) x, (int) y);   
-	            int position2 = ((ListView) v).pointToPosition((int) upx,(int) upy);               
-	            int FirstVisiblePosition = mListView.getFirstVisiblePosition();               
-	            if (position1 == position2 && Math.abs(x - upx) > 10) {   
-	                View view = ((ListView) v).getChildAt(position1);                   
-	                if (view == null) {                    
-	                 view = ((ListView) v).getChildAt(position1 - FirstVisiblePosition);  
-	                }                   
-	                removeListItem(view, position1);   
-	            }   
-	        }   
-	      
-	    return false;  
+			if (event.getAction() == MotionEvent.ACTION_DOWN) {
+				x = event.getX();
+				y = event.getY();
+			}
+			if (event.getAction() == MotionEvent.ACTION_UP) {
+				upx = event.getX();
+				upy = event.getY();
+				int position1 = ((ListView) v)
+						.pointToPosition((int) x, (int) y);
+				int position2 = ((ListView) v).pointToPosition((int) upx,
+						(int) upy);
+				int FirstVisiblePosition = mListView.getFirstVisiblePosition();
+				if (position1 == position2) {
+					if (upx - x > Tools.getPixFromDip(10.0f, getActivity())) {
+//						View view = ((ListView) v).getChildAt(position1);
+//						if (view == null) {
+						View	view = ((ListView) v).getChildAt(position1
+									- FirstVisiblePosition);
+//						}
+						moveActionBar(view, position1, true);
+					} else if (x - upx >Tools.getPixFromDip(10.0f, getActivity())) {
+//						View view = ((ListView) v).getChildAt(position1);
+//						if (view == null) {
+						View	view = ((ListView) v).getChildAt(position1
+									- FirstVisiblePosition);
+//						}
+						moveActionBar(view, position1, false);
+
+					}
+				}
+			}
+
+			return false;
 		}
 	};
 	
-	protected void removeListItem(View rowView, final int positon) {        
+	protected void moveActionBar(View rowView, final int positon , boolean isShow) {        
+		
+		TLog.e("iory", "position:"+String.valueOf(positon)+", isshow:"+isShow);
+		
         final Animation animation = (Animation) AnimationUtils.loadAnimation(rowView.getContext(), R.anim.push_left_in); 
-        animation.setAnimationListener(new AnimationListener() { 
-            public void onAnimationStart(Animation animation) {} 
-            public void onAnimationRepeat(Animation animation) {} 
-            public void onAnimationEnd(Animation animation) { 
-//                mData.remove(positon); 
-//                mAdapter.notifyDataSetChanged(); 
-               //  animation.cancel(); 
-            } 
-        }); 
-         
-        rowView.startAnimation(animation); 
+        
+        final RelativeLayout actionBar =  (RelativeLayout)rowView.findViewById(R.id.actionbar1);
+        if(actionBar==null){
+        	return;
+        }
+        if(isShow){
+            actionBar.setVisibility(View.VISIBLE);
+            
+            //初始化
+              Animation translateAnimation = new TranslateAnimation(Tools.getPixFromDip(-270.0f, getActivity()),0.1f,0.1f,0.1f);
+             			translateAnimation.setDuration(500);
+             			
+             			actionBar.startAnimation(translateAnimation);
+        } else{
+        	
+        	 Animation translateAnimation = new TranslateAnimation(0.1f, Tools.getPixFromDip(-270.0f, getActivity()),0.1f,0.1f);
+  			translateAnimation.setDuration(500);
+  			
+  			actionBar.startAnimation(translateAnimation);
+  			
+  			translateAnimation.setAnimationListener(new AnimationListener() {
+				
+				@Override
+				public void onAnimationStart(Animation animation) {
+					// TODO Auto-generated method stub
+					
+				}
+				
+				@Override
+				public void onAnimationRepeat(Animation animation) {
+					// TODO Auto-generated method stub
+					
+				}
+				
+				@Override
+				public void onAnimationEnd(Animation animation) {
+					// TODO Auto-generated method stub
+					actionBar.setVisibility(View.GONE);
+				}
+			});
+        }
+        ClientNewsSummary item =  (ClientNewsSummary)adapterMap.get(currentKindId).getItem(positon);
+        item.setItemStatus(isShow?1:0);
+        
     }
  			
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -166,7 +217,7 @@ public class PersonalListFragment extends Fragment {
 				currentKindId = kind.id;
 				PersonalListAdapter adapter = adapterMap.get(currentKindId);
 				if(adapter==null){
-					adapter = new PersonalListAdapter(getActivity(),kind.id);
+					adapter = new PersonalListAdapter(getActivity(),mListView,kind.id);
 					adapterMap.put(currentKindId, adapter);
 				}
 				mListView.setAdapter(adapter);
@@ -231,11 +282,12 @@ public class PersonalListFragment extends Fragment {
 	
 	private void initList(){
 		
-	    personalListAdapter = new PersonalListAdapter(getActivity(),2);
-		
+	
 		
 		
 		mListView = (com.iory.zhixun.view.ScollLockedListView) (this.getView().findViewById(R.id.personal_list));
+	    personalListAdapter = new PersonalListAdapter(getActivity(),mListView,2);
+		
 		// 每日精选的脚部
 		View footer = mInflater.inflate(R.layout.list_waiting, null);
 		mMoreListItemPersonalListPacker = new MoreListItem(mListView, footer, moreDateListener);

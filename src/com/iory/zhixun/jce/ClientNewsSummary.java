@@ -35,6 +35,8 @@ public final class ClientNewsSummary extends com.qq.taf.jce.JceStruct implements
     public boolean isCollect = true;
 
     public int categoryId = 0;
+    
+    public int itemStatus = 0;
 
     public java.util.ArrayList<String> keywords = null;
 
@@ -43,7 +45,15 @@ public final class ClientNewsSummary extends com.qq.taf.jce.JceStruct implements
         return id;
     }
 
-    public void  setId(int id)
+    public int getItemStatus() {
+		return itemStatus;
+	}
+
+	public void setItemStatus(int itemStatus) {
+		this.itemStatus = itemStatus;
+	}
+
+	public void  setId(int id)
     {
         this.id = id;
     }

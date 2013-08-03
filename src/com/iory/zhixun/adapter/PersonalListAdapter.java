@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import com.iory.zhixun.R;
 import com.iory.zhixun.app.DLApp;
 import com.iory.zhixun.jce.ClientNewsSummary;
+import com.iory.zhixun.view.ScollLockedListView;
 
 import android.R.integer;
 import android.content.Context;
@@ -12,18 +13,22 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 public class PersonalListAdapter extends BaseAdapter {
 	private Context context;
 	private ArrayList<ClientNewsSummary> list = null;
+	ScollLockedListView listView = null;
 	private int kindId;
 	// 列表是否已停止滑动
 	public boolean isScrollStateIdle = true;
 
-	public PersonalListAdapter(Context context ,int kindId) {
+	public PersonalListAdapter(Context context ,ScollLockedListView listView,int kindId) {
 		this.context = context;
+	    this.listView = listView;
 		this.kindId = kindId;
 	}
 	
@@ -89,6 +94,9 @@ public class PersonalListAdapter extends BaseAdapter {
 		if (list != null && position < list.size()) {
 			ClientNewsSummary item = list.get(position);
 
+			if(item ==null){
+				return null;
+			}
 			view.setTag(item);
 
 			ImageView icon = (ImageView) view
@@ -100,6 +108,22 @@ public class PersonalListAdapter extends BaseAdapter {
 
 			TextView title = (TextView) view.findViewById(R.id.title);
 			title.setText(item.title);
+			
+			RelativeLayout actionBar1 = (RelativeLayout) view.findViewById(R.id.actionbar1);
+			
+			switch(item.getItemStatus()){
+			case 0:
+                 actionBar1.setVisibility(View.GONE);
+				break;
+			case 1:
+				  actionBar1.setVisibility(View.VISIBLE);
+				break;
+			case 2:
+				break;
+			
+			
+			}
+		
 		}
 		return view;
 	}

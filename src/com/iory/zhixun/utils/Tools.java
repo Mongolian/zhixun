@@ -113,6 +113,14 @@ public class Tools {
 		int pix = (int) (aDipValue * dm.density);
 		return pix;
 	}
+	
+	public static final float getPixFromDip(float aDipValue, final Context context) {
+		DisplayMetrics dm = new DisplayMetrics();
+		WindowManager wMgr = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+		wMgr.getDefaultDisplay().getMetrics(dm);
+		float pix = (float) (aDipValue * dm.density);
+		return pix;
+	}
 
 	/**
 	 * 根据像素的值获得DIP
