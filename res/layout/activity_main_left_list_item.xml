@@ -8,7 +8,9 @@
             android:layout_width="fill_parent"
             android:layout_height="58dp"
             android:visibility="visible"
-            android:background="#30363d">
+            android:background="#30363d"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical">
 
         <ImageView
                 android:layout_width="wrap_content"
@@ -31,13 +33,14 @@
 
         <ImageView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/imageView2"
+                android:layout_height="match_parent"
+                android:id="@+id/arrow"
                 android:layout_alignBottom="@+id/item_icon"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="10dp"
                 android:src="@drawable/left_common_up"
-                android:layout_centerVertical="true"/>
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"/>
 
     </RelativeLayout>
 

@@ -631,6 +631,8 @@ public class CustomViewAbove extends ViewGroup {
 				if (isMenuOpen() && mViewBehind.menuTouchInQuickReturn(mContent, mCurItem, ev.getX() + mScrollX)) {
 					mQuickReturn = true;
 				}
+
+
 			} else {
 				mIsUnableToDrag = true;
 			}
