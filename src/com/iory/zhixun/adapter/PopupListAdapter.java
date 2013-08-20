@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import com.iory.zhixun.R;
 import com.iory.zhixun.app.DLApp;
 import com.iory.zhixun.data.NewsKind;
-import com.iory.zhixun.jce.ClientNewsSummary;
 
 import android.content.Context;
 import android.view.LayoutInflater;

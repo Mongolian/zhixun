@@ -133,9 +133,10 @@ public class HttpTask {
 		}
 	}
 
-	public HttpTask(String sUrl, boolean bPost, int cmdType, byte[] requestData, HttpTaskListener listener) {
+	public HttpTask(String sUrl, boolean bPost, int cmdType, byte[] requestData, HttpTaskListener listener,Handler handler) {
 		this(sUrl, bPost, requestData, listener);
 		this.cmdType = cmdType;
+		this.handler = handler;
 	}
 
 	public HttpTask(String sUrl, boolean bPost, HashMap<String, Integer> funName2cmdTypeMap, byte[] requestData, HttpTaskListener listener) {
@@ -212,11 +213,11 @@ public class HttpTask {
 			return;
 		}
 		// 判断地址是否有效,如无效,则直接返回错误
-		if (!isUrlAvailable(uri)) {
-			listener.onDealHttpError(cmdType, funName2cmdTypeMap, HttpTaskListener.ERROR_URI_format_error, "", this);
-			TLog.v(TAG, "ERROR_URI_format_error:" + uri);
-			return;
-		}
+//		if (!isUrlAvailable(uri)) {
+//			listener.onDealHttpError(cmdType, funName2cmdTypeMap, HttpTaskListener.ERROR_URI_format_error, "", this);
+//			TLog.v(TAG, "ERROR_URI_format_error:" + uri);
+//			return;
+//		}
 		while (tryCounts < MAX_TRY_COUNT) {
 			
 			//下载APK包和软件图标不作重试
@@ -446,5 +447,21 @@ public class HttpTask {
 	public int getCmdType() {
 		return cmdType;
 	}
+	
+	public static void send(final HttpTask task)
+	{
+		if( task == null)
+		{
+			return;
+		}
+		Thread s = new Thread()
+		{
+			public void run()
+			{
+				task.exec();
+			}
+		};
+		s.start();
+     }
 	
 }
