@@ -1,18 +1,16 @@
 package com.iory.zhixun.ui;
 
 
-import android.app.AlertDialog;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Toast;
 
 import com.iory.zhixun.R;
-import com.iory.zhixun.fragments.RightPanelListFragment;
+import com.iory.zhixun.fragments.ColorFragment;
 import com.iory.zhixun.fragments.PersonalListFragment;
 import com.iory.zhixun.slidingmenu.lib.SlidingMenu;
 
 
-public class MainActivity extends BaseActivity implements View.OnClickListener{
+public class MainActivity extends BaseActivity {
 
 	public MainActivity() {
 		super(R.string.app_name);
@@ -59,11 +57,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
 		getSlidingMenu().setSecondaryShadowDrawable(R.drawable.shadowright);
 		getSupportFragmentManager()
 		.beginTransaction()
-		.replace(R.id.menu_frame_two, new RightPanelListFragment())
+		.replace(R.id.menu_frame_two, new ColorFragment())
 		.commit();
 	}
 
-    @Override
-    public void onClick(View v) {
-    }
 }

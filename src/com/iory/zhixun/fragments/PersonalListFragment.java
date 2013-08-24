@@ -7,6 +7,8 @@ import java.util.Map;
 import java.util.Vector;
 import java.util.zip.Inflater;
 
+import zhi_xun.ClientNewsSummary;
+
 import android.R.integer;
 import android.content.Context;
 import android.content.res.Configuration;
@@ -47,7 +49,6 @@ import com.iory.zhixun.adapter.PopupListAdapter;
 import com.iory.zhixun.app.DLApp;
 import com.iory.zhixun.app.TLog;
 import com.iory.zhixun.data.NewsKind;
-import com.iory.zhixun.jce.ClientNewsSummary;
 import com.iory.zhixun.utils.Tools;
 import com.iory.zhixun.utils.Utils;
 import com.iory.zhixun.view.MoreListItem;
@@ -398,11 +399,6 @@ public class PersonalListFragment extends Fragment {
 //			}
 			super.handleMessage(msg);
 			switch (msg.what) {
-//			case MainLogicController.MSG_getSoftwaresLatest: {
-//				TLog.v(TAG, "MSG_getSoftwaresLatest");
-//
-//			}
-//				break;
 			case LinkData.GETNEWSLIST_SUCCESS: {
 				TLog.v("loadListNetHandler handleMessage", "MSG_guessIt");
 				
@@ -418,28 +414,6 @@ public class PersonalListFragment extends Fragment {
 					if(adapter != null){
 						boolean flag = adapter.getCount() == 0;
 						
-						if(currentKindId==1){
-						    newsList = new ArrayList<ClientNewsSummary>();
-							
-							for (int i=0;i<5;i++){
-								ClientNewsSummary newsSummary = new ClientNewsSummary(1, "分类ID是1的模拟数据", "2013-07-02",null, "分类ID是1的模拟数据", "11111", "www.qq.com", false, 5, null);
-								newsList.add(newsSummary);
-							}
-						}	else if(currentKindId==2){
-						    newsList = new ArrayList<ClientNewsSummary>();
-							
-							for (int i=0;i<5;i++){
-								ClientNewsSummary newsSummary = new ClientNewsSummary(1, "分类ID是2的模拟数据", "2013-07-02",null, "分类ID是2的模拟数据", "22222", "www.baidu.com", false, 5, null);
-								newsList.add(newsSummary);
-							}
-						}else if(currentKindId==3){
-						    newsList = new ArrayList<ClientNewsSummary>();
-							
-							for (int i=0;i<5;i++){
-								ClientNewsSummary newsSummary = new ClientNewsSummary(1, "分类ID是3的模拟数据", "2013-07-02",null, "分类ID是3的模拟数据", "33333", "www.360.com", false, 5, null);
-								newsList.add(newsSummary);
-							}
-						}
 						
 						adapter.addListData(newsList);
 						adapter.notifyDataSetChanged();

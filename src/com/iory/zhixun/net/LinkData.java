@@ -3,12 +3,30 @@ package com.iory.zhixun.net;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Vector;
 
 import org.apache.http.HttpResponse;
+
+import zhi_xun.ClientNewsSummary;
+import zhi_xun.ReqGetNewsContent;
+import zhi_xun.ReqGetNewsList;
+import zhi_xun.ReqUserLogin;
+import zhi_xun.ResGetNewsList;
+import zhi_xun.SessionInfo;
+import zhi_xun.cnst.FUN_GET_NEWS_LIST;
+import zhi_xun.cnst.FUN_USER_LOGIN;
+import zhi_xun.cnst.PROTOCOL_ENCODING;
+import zhi_xun.cnst.REQUEST_KEY;
+import zhi_xun.cnst.RESPONSE_KEY;
+import zhi_xun.cnst.SERVANT_NAME;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -21,11 +39,6 @@ import android.os.Message;
 import android.text.format.Time;
 
 import com.iory.zhixun.data.NewsItem;
-import com.iory.zhixun.jce.ClientNewsSummary;
-import com.iory.zhixun.jce.ReqGetNewsContent;
-import com.iory.zhixun.jce.ReqGetNewsList;
-import com.iory.zhixun.jce.ReqUserLogin;
-import com.iory.zhixun.jce.ResGetNewsList;
 import com.qq.jce.wup.UniPacket;
 import com.qq.taf.jce.JceStruct;
 
@@ -42,6 +55,7 @@ public final class LinkData {
 	
 	
 	public static final int GETNEWSLIST_SUCCESS = 1;
+	public static final int GETNEWSLIST_FAILED = -1;
 	
 	
 	
@@ -50,107 +64,9 @@ public final class LinkData {
 	
 	
 
-	/** 激活成功 */
-	public static final int ACTIVE_SUCCESS = 1;
-	/** 激活失败 */
-	public static final int ACTIVE_FAILED = 2;
-
-	/**
-	 * 应用程序启动上报
-	 */
-	public static final int APP_LAUNCH_REPORT_SUCCESS = 3;
-
-	/**
-	 * 应用程序启动上报失败
-	 */
-	public static final int APP_LAUNCH_REPORT_FAILED = 4;
-	/** 拉取广告成功 */
-	public static final int GET_AD_SUCCESS = 5;
-	/** 拉取广告失败 */
-	public static final int GET_AD_FAILED = 6;
-
-	/** 拉取图片成功 */
-	public static final int GET_IMG_SUCCESS = 7;
-
-	/** 拉取图片失败 */
-	public static final int GET_IMG_FAILED = 8;
-
-	/** 点击广告上报成功 */
-	public static final int GET_CLICK_AD_SUCCESS = 9;
-
-	/** 点击广告上报失败 */
-	public static final int GET_CLICK_AD_FAILED = 10;
-
-	/** 发送广告播放数据成功 */
-	public static final int SEND_AD_DATA_SUCCESS = 11;
-
-	/** 发送播放数据失败 */
-	public static final int SEND_AD_DATA_FAILED = 12;
-
-	/** 拉取点击效果图片成功 */
-	public static final int GET_EFFECT_IMG_SUCCESS = 13;
-	
-	/** 拉取点击效果图片失败 */
-	public static final int GET_EFFECT_IMG_FAILED = 14;
-	
-	/** 拉取点击mobwinlogo资源图片成功 */
-	public static final int GET_MOBWINLOGO_IMG_SUCCESS = 15;
-	
-	/** 拉取点击mobwinlogo资源图片失败 */
-	public static final int GET_MOBWINLOGO_IMG_FAILED = 16;
-	
-	/** 拉取点击确认button资源图片成功 */
-	public static final int GET_CONFIRM_BUTTON_IMG_SUCCESS = 17;
-	
-	/** 拉取点击确认button资源图片失败 */
-	public static final int GET_CONFIRM_BUTTON_IMG_FAILED = 18;
-	
-	/** 拉取点击确认button资源图片成功 */
-	public static final int GET_CONFIRM_BUTTON_PRESSED_IMG_SUCCESS = 19;
-	
-	/** 拉取点击确认button资源图片失败 */
-	public static final int GET_CONFIRM_BUTTON_PRESSED_IMG_FAILED = 20;
-
-	/** 拉取BANNER广告边框资源图片成功 */
-	public static final int GET_BANNER_FRAME_IMG_SUCCESS = 21;
-	
-	/** 拉取BANNER广告边框资源图片失败 */
-	public static final int GET_BANNER_FRAME_IMG_FAILED = 22;
-	
-	/** 普通图片 */
-	public static final int BITMAP_STATIC = 0;
-
-	/** gif图片 */
-	public static final int BITMAP_GIF = 1;
-
-	/** 广告图片 */
-	public static final int AD_BITMAP = 0;
-
-	/** 效果触发图片 */
-	public static final int EFFECT_BITMAP = 1;
-
-	/** 资源图片 */
-	public static final int RESOURCE_BITMAP = 2;
-
-//	/**banner条资源图片*/
-//	public static final int BANNER_RESOURCE_BITMAP = 3;
-	
-	/**mobwinlogo资源图片*/
-	public static final int MOBWINLOGO_BITMAP = 3;
-	
-	/**点击确认button资源图片*/
-	public static final int CONFIRM_BUTTON_BITMAP = 4;
-	
-	/**点击确认按下button资源图片*/
-	public static final int CONFIRM_BUTTON_PRESSED_BITMAP = 5;
-	
-	/**BANNER广告边框资源图片*/
-	public static final int BANNER_FRAME_BITMAP = 6;
 	
 	/** UniPackage 获取getByClass用参数 */
-	static ReqUserLogin instance_ReqUserLogin = new ReqUserLogin(); 
-	static ReqGetNewsList instance_ReqGetNewsList = new ReqGetNewsList();
-	static ReqGetNewsContent instance_ReqGetNewsContent = new ReqGetNewsContent();	
+	static ResGetNewsList instance_ResGetNewsList = new ResGetNewsList();
 	
 	
 	
@@ -179,9 +95,7 @@ public final class LinkData {
 	 * 退出程序时取消网络请求
 	 */
 	public void onDestroy() {
-		instance_ReqUserLogin.recyle();
-		instance_ReqGetNewsList.recyle();
-		instance_ReqGetNewsContent.recyle();
+		instance_ResGetNewsList.recyle();
 	}
 
 	/**
@@ -206,16 +120,18 @@ public final class LinkData {
 		if (data == null) {
 			return null;
 		}
+		
+		
 		UniPacket client = new UniPacket();
-		client.setEncodeName("UTF-8");
+		client.setEncodeName(PROTOCOL_ENCODING.value);
 		client.decode(data);
 		switch( cmdType ){
 		case CMD_USERLOGIN:
-			return client.getByClass("res", instance_ReqUserLogin);
+			//return client.getByClass(RESPONSE_KEY.value, instance_ReqUserLogin);
 		case CMD_GETNEWSLIST:
-			return client.getByClass("res", instance_ReqGetNewsList);
+			return client.getByClass(RESPONSE_KEY.value, instance_ResGetNewsList);
 		case CMD_GETNEWSCONTENT:
-			return client.getByClass("res", instance_ReqGetNewsContent);
+			//return client.getByClass(RESPONSE_KEY.value, instance_ReqGetNewsContent);
 		default:
 			return null;
 		}
@@ -233,31 +149,32 @@ public final class LinkData {
 	 */
 	public void sendGetNewsList(Context context, String requestUrl, int lastNewsId, int categoryId, final Handler handler) {
 
-		// 测试模式下不上报
-		// if (AdModel.isTestFlag()) {
-		// return;
-		// }
-/*		String url = requestUrl + FUNCTION_APP_LAUNCH.value;
+		
+		
+		String url = "http://192.168.1.104:8080/zhixun/core?version=333";
 
+		ReqGetNewsList req = new ReqGetNewsList();
+		SessionInfo  sinfo=new SessionInfo();
+		sinfo.setSid("qq");
+		sinfo.setUserId(252067119);
+		req.setLastNewsId(2281);
+		req.setCategoryId(1);
+		req.setDirection((short)-1);
+		req.setSessionInfo(sinfo);
+		
 		UniPacket uniPacket = new UniPacket();
-		packageUniPkg(context, uniPacket);
-		uniPacket.setFuncName(FUNCTION_APP_LAUNCH.value);
-
-		ReqAppLaunch req = new ReqAppLaunch();
-		req.setUser_info(formatData.getUserInfo(context));
-		req.setApp_info(formatData.getAppInfo(context));
-		SettingVersions sv = new SettingVersions(appVersion, sysVersion);
-		// TLog.v(TAG , "getAdActivateData 2:" + req.toString());
-		req.settingVerions = sv;
+		uniPacket.setEncodeName(PROTOCOL_ENCODING.value);
+		uniPacket.setServantName(SERVANT_NAME.value);
+		uniPacket.setFuncName(FUN_GET_NEWS_LIST.value);
 		uniPacket.put(REQUEST_KEY.value, req);
 		byte[] data = uniPacket.encode();
 
-		HttpTask httptask = new HttpTask(url, true, CMD_APP_START, data, taskListener, handler);
+		HttpTask httptask = new HttpTask(url, true, CMD_GETNEWSLIST, data, taskListener, handler);
 
-		HttpTask.send(httptask);*/
+		HttpTask.send(httptask);
 		
 		
-		ArrayList<ClientNewsSummary> newsList = new ArrayList<ClientNewsSummary>();
+		/*ArrayList<ClientNewsSummary> newsList = new ArrayList<ClientNewsSummary>();
 		
 		for (int i=0;i<5;i++){
 			ClientNewsSummary newsSummary = new ClientNewsSummary(1, "title", "2013-07-02",null, "这是一条模拟的数据", "舅子", "www.qq.com", false, 5, null);
@@ -268,7 +185,7 @@ public final class LinkData {
 		Message msg = handler.obtainMessage(GETNEWSLIST_SUCCESS);
 		msg.arg1 = 1;
 		msg.obj = newsList;
-		handler.sendMessage(msg);
+		handler.sendMessage(msg);*/
 		
 		return;
 	}
@@ -696,10 +613,15 @@ public final class LinkData {
 
 	
 	
-	com.iory.zhixun.http.HttpTaskListener taskListener = new com.iory.zhixun.http.HttpTaskListener() {
+	HttpTaskListener taskListener = new HttpTaskListener() {
+
+
+
 
 		@Override
-		public void onReceiveResponseData(HttpResponse response, com.iory.zhixun.http.HttpTask httpTask) throws Exception {
+		public void onReceiveResponseData(int cmdType,
+				HashMap<String, Integer> funName2cmdTypeMap,
+				HttpResponse response, HttpTask httpTask) throws Exception {
 			try {
 				Handler handler = httpTask.handler;
 				if (handler == null) {
@@ -709,17 +631,19 @@ public final class LinkData {
 				switch (httpTask.cmdType) {
 				case CMD_GETNEWSLIST: { // 应用启动
 
+					
+					
 					ResGetNewsList result = (ResGetNewsList) unpackage(data , CMD_GETNEWSLIST);
 					if (handler == null) {
 						return;
 					}
 					if (result != null && result.code == 0) {
-						Message msg = handler.obtainMessage(APP_LAUNCH_REPORT_SUCCESS);
-						msg.arg1 = result.code;
-						msg.obj = result;
+						Message msg = handler.obtainMessage(GETNEWSLIST_SUCCESS);
+						msg.arg1 = 1;
+						msg.obj = result.getNewsList();
 						handler.sendMessage(msg);
 					} else {
-						Message msg = handler.obtainMessage(APP_LAUNCH_REPORT_FAILED);
+						Message msg = handler.obtainMessage(GETNEWSLIST_FAILED);
 						msg.arg1 = result.code;
 						handler.sendMessage(msg);
 					}
@@ -728,13 +652,15 @@ public final class LinkData {
 					break;
 				}
 			} catch (Exception e) {
+				e.printStackTrace();
 			}
 		}
 
 
 		@Override
-		public void onDealHttpError(int errorCode,
-				com.iory.zhixun.http.HttpTask httpTask) {
+		public void onDealHttpError(int cmdType,
+				HashMap<String, Integer> funName2cmdTypeMap, int errorCode,
+				String errorStr, HttpTask httpTask) {
 			// TODO Auto-generated method stub
 
 			Handler handler = httpTask.handler;
@@ -745,7 +671,7 @@ public final class LinkData {
 			case CMD_GETNEWSLIST: {
 				
 
-					Message msg = handler.obtainMessage(APP_LAUNCH_REPORT_FAILED);
+					Message msg = handler.obtainMessage(GETNEWSLIST_FAILED);
 					msg.arg1 = errorCode;
 					handler.sendMessage(msg);
 				

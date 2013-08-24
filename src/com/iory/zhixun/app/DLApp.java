@@ -2,8 +2,9 @@ package com.iory.zhixun.app;
 
 import java.util.ArrayList;
 
+import zhi_xun.ClientNewsSummary;
+
 import com.iory.zhixun.data.NewsKind;
-import com.iory.zhixun.jce.ClientNewsSummary;
 import android.app.Application;
 import android.content.Context;
 import android.os.Handler;

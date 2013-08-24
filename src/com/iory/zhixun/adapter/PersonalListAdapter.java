@@ -2,9 +2,10 @@ package com.iory.zhixun.adapter;
 
 import java.util.ArrayList;
 
+import zhi_xun.ClientNewsSummary;
+
 import com.iory.zhixun.R;
 import com.iory.zhixun.app.DLApp;
-import com.iory.zhixun.jce.ClientNewsSummary;
 import com.iory.zhixun.view.ScollLockedListView;
 
 import android.R.integer;
