@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+  <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            >
+      <RadioGroup
+              android:layout_width="fill_parent"
+              android:orientation="horizontal"
+              android:layout_height="50dp">
+
+          <RadioButton
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/radioButton"
+                  android:layout_gravity="left|center_vertical"
+                  android:checked="true"
+                  android:button="@null"
+                  android:background="@drawable/right_panel_label_radio_button"
+                  android:layout_weight="1"/>
+
+          <RadioButton
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/radioButton2"
+                  android:button="@null"
+                  android:background="@drawable/right_panel_label_radio_button"
+                  android:layout_gravity="right|center_vertical"
+                  android:layout_weight="1"/>
+      </RadioGroup>
+    </LinearLayout>
+
+    <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+        <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                >
+
+            <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:id="@+id/label_header"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:background="@color/social_friend_gray"
+                    >
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="订阅标签"
+                        android:id="@+id/textView"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="20dp"/>
+
+                <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/add_label"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/right_panel_add"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/label_header"
+                    android:layout_gravity="center"
+                    android:id="@+id/middle_listview_layout"
+                    >
+
+                <ListView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/listView"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"
+                        android:footerDividersEnabled="false"
+                        android:headerDividersEnabled="false"
+                        android:focusable="false"
+                        android:longClickable="false"
+                        android:layout_alignParentBottom="false"
+                        android:choiceMode="multipleChoice"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="80dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/social_friend_gray"
+                    android:layout_alignParentRight="false"
+                    android:layout_alignParentTop="false"
+                    android:layout_alignParentLeft="false"
+                    >
+                <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/global_blue_btn_bg"
+                        android:layout_alignParentBottom="true"
+                        android:text="@string/right_panel_label_edit"
+                        android:layout_centerInParent="true"
+                        android:layout_marginBottom="10dp"
+                        android:id="@+id/edit_label"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </FrameLayout>
+
+
+</LinearLayout>

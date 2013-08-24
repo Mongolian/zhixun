@@ -16,5 +16,6 @@
 
     <string name="anctivity_waitinfo">获取列表中......</string>
     <string name="list_waitting_getmore">获取更多</string>
+    <string name="right_panel_label_edit">编辑</string>
 
 </resources>
