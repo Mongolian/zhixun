@@ -2,11 +2,9 @@ package com.iory.zhixun.ui;
 
 
 import android.os.Bundle;
-import android.view.Window;
 import android.widget.Toast;
 
 import com.iory.zhixun.R;
-import com.iory.zhixun.fragments.ColorFragment;
 import com.iory.zhixun.fragments.PersonalListFragment;
 import com.iory.zhixun.slidingmenu.lib.SlidingMenu;
 
@@ -20,7 +18,6 @@ public class MainActivity extends BaseActivity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		requestWindowFeature(Window.FEATURE_NO_TITLE);//去掉标题栏
 		getSlidingMenu().setMode(SlidingMenu.LEFT_RIGHT);
 		getSlidingMenu().setTouchModeAbove(SlidingMenu.TOUCHMODE_MARGIN);
 
@@ -59,7 +56,7 @@ public class MainActivity extends BaseActivity {
 		getSlidingMenu().setSecondaryShadowDrawable(R.drawable.shadowright);
 		getSupportFragmentManager()
 		.beginTransaction()
-		.replace(R.id.menu_frame_two, new ColorFragment())
+		.replace(R.id.menu_frame_two, new PersonalListFragment())
 		.commit();
 	}
 

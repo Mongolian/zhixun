@@ -1,49 +1,38 @@
 package com.iory.zhixun.provider;
 
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Vector;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
-
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 
+import com.iory.zhixun.data.LabelItem;
 import com.iory.zhixun.data.NewsItem;
 
-public class NewsServer {
+import java.util.ArrayList;
+import java.util.List;
+
+public class LabelServer {
 
 	private Context mContext;
 
-	public NewsServer(Context context) {
-		this.mContext = NewsSqliteHelper.mcontext;
+	public LabelServer(Context context) {
+		this.mContext =context;
 	}
 
 
 
 	/**
-	 * 插入新闻列表
+	 * 插入标签列表
 	 *
 	 * @param
 	 */
-	private void addNewsList(List<NewsItem> newsItemList) {
+	private void addNewsList(List<LabelItem> labelItems) {
         ContentValues contentValues = null ;
-		for (int i = 0; i < newsItemList.size(); ++i) {
+		for (int i = 0; i < labelItems.size(); ++i) {
             contentValues = new ContentValues();
-            contentValues.put(NewsSqliteHelper.TABLE_NEWS_FEILD_TITLE, newsItemList.get(i).title);
-            contentValues.put(NewsSqliteHelper.TABLE_NEWS_FEILD_CONTENT, newsItemList.get(i).detail);
-            contentValues.put(NewsSqliteHelper.TABLE_NEWS_FEILD_FROM,newsItemList.get(i).mNewsFrom);
-            contentValues.put(NewsSqliteHelper.TABLE_NEWS_FEILD_KEY, newsItemList.get(i).mNewsKey);
-            contentValues.put(NewsSqliteHelper.TABLE_NEWS_FEILD_FAVORITE, newsItemList.get(i).mIsFav);
-            contentValues.put(NewsSqliteHelper.TABLE_NEWS_FEILD_IMAGE_URL, newsItemList.get(i).mImageUrl);
-            contentValues.put(NewsSqliteHelper.TABLE_NEWS_FEILD_VEDIO_URL, newsItemList.get(i).mVedioUrl);
-            contentValues.put(NewsSqliteHelper.TABLE_NEWS_FEILD_NEWS_TYPE, newsItemList.get(i).mNewsKey);
-            contentValues.put(NewsSqliteHelper.TABLE_NEWS_FEILD_TYPE, newsItemList.get(i).mType);
-            contentValues.put(NewsSqliteHelper.TABLE_NEWS_FEILD_TIME, newsItemList.get(i).mNewsTime);
-            mContext.getContentResolver().insert(NewsContentProvider.CONTENT_URI, contentValues);
+            contentValues.put(NewsSqliteHelper.TABLE_LABEL_NAME, labelItems.get(i).mName);
+            contentValues.put(NewsSqliteHelper.TABLE_LABEL_HOT, labelItems.get(i).mIsHot);
+            mContext.getContentResolver().insert(LabelContentProvider.CONTENT_URI, contentValues);
         }
     }
 

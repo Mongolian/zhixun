@@ -40,6 +40,13 @@ class NewsSqliteHelper extends SQLiteOpenHelper {
     public static final String TABLE_NEWS_TYPES_FIELD_VALUE = "value";
     public static final String TABLE_NEWS_TYPES_FIELD_IS_FAV = "is_fav";
 
+    // 标签
+    public static final String TABLE_LABEL = "label";
+    // 标签名字
+    public static final String TABLE_LABEL_NAME = "label_name";
+    // 是否是最热标签
+    public static final String TABLE_LABEL_HOT = "label_hot";
+
 	public static final int DATABASE_VERSION = 1;
 	public static Context mcontext;
 
