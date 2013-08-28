@@ -10,10 +10,16 @@
   <component name="AndroidLayouts">
     <shared>
       <config>
-        <target>android-10</target>
+        <target>android-17</target>
       </config>
     </shared>
     <layouts>
+      <layout url="file://$PROJECT_DIR$/res/layout/popuplist_row.xml">
+        <config>
+          <device>Nexus S</device>
+          <theme>@android:style/Theme.Holo</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/res/layout/slidingmenumain.xml">
         <config>
           <device>4in WVGA (Nexus S)</device>
@@ -27,7 +33,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="806e8ce3-40ee-4b8b-93dc-90bedd8efbaa" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/iory/zhixun/ui/MainActivity.java" afterPath="$PROJECT_DIR$/src/com/iory/zhixun/ui/MainActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/wup_1_0_0_SNAPSHOT.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/iory/zhixun/view/EdgeGlow.java" afterPath="$PROJECT_DIR$/src/com/iory/zhixun/view/EdgeGlow.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/iory/zhixun/fragments/PersonalListFragment.java" afterPath="$PROJECT_DIR$/src/com/iory/zhixun/fragments/PersonalListFragment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -35,32 +43,6 @@
     </list>
     <ignored path="zhixun.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="806e8ce3-40ee-4b8b-93dc-90bedd8efbaa" time="1372344840228" ignored="false" />
-    <file path="/PhoneRechargeActivity.java" changelist="806e8ce3-40ee-4b8b-93dc-90bedd8efbaa" time="1370940421029" ignored="false" />
-    <file path="$PROJECT_DIR$/../wokspace_my_fav_source/Impp-Base/src/com/polyvi/cupmp/ui/phone/PhoneRechargeActivity.java" changelist="806e8ce3-40ee-4b8b-93dc-90bedd8efbaa" time="1370940422093" ignored="false" />
-    <file path="$PROJECT_DIR$/../wokspace_my_fav_source/Impp-Base-lib/src/com/risetek/impp/http/ImppClientApi.java" changelist="806e8ce3-40ee-4b8b-93dc-90bedd8efbaa" time="1370951754812" ignored="false" />
-    <file path="/ImppClientApi.java" changelist="806e8ce3-40ee-4b8b-93dc-90bedd8efbaa" time="1370951754812" ignored="false" />
-    <file path="$PROJECT_DIR$/../wokspace_my_fav_source/Impp-Base/.idea/workspace.xml" changelist="806e8ce3-40ee-4b8b-93dc-90bedd8efbaa" time="1370955526445" ignored="false" />
-    <file path="$PROJECT_DIR$/../android_studio_workspace/SlidingMenu-master/example/.idea/workspace.xml" changelist="806e8ce3-40ee-4b8b-93dc-90bedd8efbaa" time="1370958964420" ignored="false" />
-    <file path="$PROJECT_DIR$/../android_studio_workspace/SlidingMenu-master/example/.idea/misc.xml" changelist="806e8ce3-40ee-4b8b-93dc-90bedd8efbaa" time="1370956638700" ignored="false" />
-    <file path="$PROJECT_DIR$/../android_studio_workspace/SlidingMenu-master/example/gen/com/slidingmenu/example/R.java" changelist="806e8ce3-40ee-4b8b-93dc-90bedd8efbaa" time="1370956973470" ignored="false" />
-    <file path="/fragment.java" changelist="806e8ce3-40ee-4b8b-93dc-90bedd8efbaa" time="1371010611223" ignored="false" />
-    <file path="$PROJECT_DIR$/../android_studio_workspace/SlidingMenu-master/library/project.properties" changelist="806e8ce3-40ee-4b8b-93dc-90bedd8efbaa" time="1370958485179" ignored="false" />
-    <file path="$PROJECT_DIR$/../android_studio_workspace/SlidingMenu-master/library/src/com/slidingmenu/lib/SlidingMenu.java" changelist="806e8ce3-40ee-4b8b-93dc-90bedd8efbaa" time="1370957484233" ignored="false" />
-    <file path="$PROJECT_DIR$/../android_studio_workspace/SlidingMenu-master/library/gen/com/slidingmenu/lib/R.java" changelist="806e8ce3-40ee-4b8b-93dc-90bedd8efbaa" time="1370958664329" ignored="false" />
-    <file path="$PROJECT_DIR$/../android_studio_workspace/SlidingMenu-master/library/gen/com/slidingmenu/lib/Manifest.java" changelist="806e8ce3-40ee-4b8b-93dc-90bedd8efbaa" time="1370958487939" ignored="false" />
-    <file path="$PROJECT_DIR$/../android_studio_workspace/SlidingMenu-master/library/gen/com/slidingmenu/lib/BuildConfig.java" changelist="806e8ce3-40ee-4b8b-93dc-90bedd8efbaa" time="1370958689750" ignored="false" />
-    <file path="$PROJECT_DIR$/../android_studio_workspace/SlidingMenu-master/example/project.properties" changelist="806e8ce3-40ee-4b8b-93dc-90bedd8efbaa" time="1370958725330" ignored="false" />
-    <file path="$PROJECT_DIR$/../android_studio_workspace/SlidingMenu-master/example/res/values/styles.xml" changelist="806e8ce3-40ee-4b8b-93dc-90bedd8efbaa" time="1370958806143" ignored="false" />
-    <file path="$PROJECT_DIR$/../android_studio_workspace/SlidingMenu-master/example/gen/com/slidingmenu/example/BuildConfig.java" changelist="806e8ce3-40ee-4b8b-93dc-90bedd8efbaa" time="1370958874860" ignored="false" />
-    <file path="/MainActivity.java" changelist="806e8ce3-40ee-4b8b-93dc-90bedd8efbaa" time="1371487481049" ignored="false" />
-    <file path="/a.dummy" changelist="806e8ce3-40ee-4b8b-93dc-90bedd8efbaa" time="1371003445375" ignored="false" />
-    <file path="/CustomViewAbove.java" changelist="806e8ce3-40ee-4b8b-93dc-90bedd8efbaa" time="1371005087608" ignored="false" />
-    <file path="/LeftAndRightActivity.java" changelist="806e8ce3-40ee-4b8b-93dc-90bedd8efbaa" time="1371007756162" ignored="false" />
-    <file path="/AndroidManifest.xml" changelist="806e8ce3-40ee-4b8b-93dc-90bedd8efbaa" time="1371010383612" ignored="false" />
-    <file path="/slidingmenumain.xml" changelist="806e8ce3-40ee-4b8b-93dc-90bedd8efbaa" time="1371010876874" ignored="false" />
-    <file path="/BaseActivity.java" changelist="806e8ce3-40ee-4b8b-93dc-90bedd8efbaa" time="1371262353099" ignored="false" />
-    <file path="/a.java" changelist="806e8ce3-40ee-4b8b-93dc-90bedd8efbaa" time="1371303891028" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +50,9 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="USE_COMPILE_SERVER" value="false" />
+  </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -75,6 +60,23 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/iory/zhixun/ui/MainActivity.java" line="21" class="com.iory.zhixun.ui.MainActivity" package="com.iory.zhixun.ui">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
@@ -112,23 +114,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/com/iory/zhixun/ui/MainActivity.java" line="21" class="com.iory.zhixun.ui.MainActivity" package="com.iory.zhixun.ui">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -141,25 +126,40 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/iory/zhixun/ui/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="33" selection-start="349" selection-end="349" vertical-scroll-proportion="-6.84">
+            <state line="45" column="66" selection-start="1509" selection-end="1509" vertical-scroll-proportion="0.0" vertical-offset="836" max-vertical-offset="1330">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ColorFragment.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/iory/zhixun/fragments/ColorFragment.java">
+      <file leaf-file-name="EdgeGlow.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/iory/zhixun/view/EdgeGlow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="55" selection-start="738" selection-end="738" vertical-scroll-proportion="0.4143302">
+            <state line="33" column="57" selection-start="1108" selection-end="1108" vertical-scroll-proportion="0.0" vertical-offset="608" max-vertical-offset="6384">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SampleListFragment.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/iory/zhixun/fragments/SampleListFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="40" selection-start="551" selection-end="551" vertical-scroll-proportion="0.0">
+      <file leaf-file-name="popuplist_row.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/popuplist_row.xml">
+          <provider selected="true" editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="personal_row.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/res/layout/personal_row.xml">
+          <provider selected="true" editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2603">
               <folding />
             </state>
           </provider>
@@ -168,7 +168,7 @@
       <file leaf-file-name="SlidingListActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/iory/zhixun/slidingmenu/lib/SlidingListActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="13" selection-start="247" selection-end="247" vertical-scroll-proportion="0.0">
+            <state line="9" column="13" selection-start="247" selection-end="247" vertical-scroll-proportion="0.0" vertical-offset="152" max-vertical-offset="3059">
               <folding />
             </state>
           </provider>
@@ -177,7 +177,7 @@
       <file leaf-file-name="SlidingFragmentActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/iory/zhixun/slidingmenu/lib/SlidingFragmentActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="13" selection-start="230" selection-end="230" vertical-scroll-proportion="0.0">
+            <state line="8" column="13" selection-start="230" selection-end="230" vertical-scroll-proportion="0.0" vertical-offset="133" max-vertical-offset="2964">
               <folding />
             </state>
           </provider>
@@ -186,19 +186,7 @@
       <file leaf-file-name="BaseActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/iory/zhixun/ui/BaseActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="0" selection-start="922" selection-end="922" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="list.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/list.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="35" column="0" selection-start="928" selection-end="928" vertical-scroll-proportion="0.0" vertical-offset="646" max-vertical-offset="1919">
               <folding />
             </state>
           </provider>
@@ -210,7 +198,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="551">
               <folding />
             </state>
           </provider>
@@ -222,7 +210,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="42" selection-start="262" selection-end="262" vertical-scroll-proportion="0.0">
+            <state line="4" column="42" selection-start="262" selection-end="262" vertical-scroll-proportion="0.0" vertical-offset="57" max-vertical-offset="190">
               <folding />
             </state>
           </provider>
@@ -234,7 +222,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="43" selection-start="230" selection-end="230" vertical-scroll-proportion="0.0">
+            <state line="4" column="43" selection-start="230" selection-end="230" vertical-scroll-proportion="0.0" vertical-offset="57" max-vertical-offset="247">
               <folding />
             </state>
           </provider>
@@ -258,7 +246,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/iory/zhixun/slidingmenu/lib/SlidingMenu.java" />
         <option value="$PROJECT_DIR$/src/com/iory/zhixun/slidingmenu/lib/CanvasTransformerBuilder.java" />
         <option value="$PROJECT_DIR$/src/com/iory/zhixun/slidingmenu/lib/CustomViewBehind.java" />
         <option value="$PROJECT_DIR$/src/com/iory/zhixun/fragments/ColorFragment.java" />
@@ -274,14 +261,15 @@
         <option value="$PROJECT_DIR$/res/layout/slidingmenumain.xml" />
         <option value="$PROJECT_DIR$/src/com/iory/zhixun/ui/MainActivity.java" />
         <option value="$PROJECT_DIR$/src/com/iory/zhixun/ui/BaseActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/iory/zhixun/view/EdgeGlow.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1696" />
-    <option name="height" value="1026" />
+    <option name="width" value="1936" />
+    <option name="height" value="1014" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -338,7 +326,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -347,44 +334,84 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zhixun" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zhixun" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zhixun" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zhixun" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zhixun" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zhixun" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zhixun" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zhixun" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="SDKs" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="199" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="201" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="project.structure.proportion" value="0.0" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="199" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/libs/android-support-v4.jar!/" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="205" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="999" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="999" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="205" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="201" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="options.lastSelected" value="File.Encoding" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="restartRequiresConfirmation" value="true" />
     <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
-    <property name="options.lastSelected" value="android.dex.compiler" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="restartRequiresConfirmation" value="true" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -596,32 +623,33 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1014" extended-state="6" />
     <editor active="false" />
     <layout>
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282532" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33333334" sideWeight="0.6729191" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20253165" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20139697" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19423692" sideWeight="0.67327887" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3270809" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32748538" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32672113" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.67327887" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19461444" sideWeight="0.79746836" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20253165" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19423692" sideWeight="0.798603" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20139697" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32672113" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -686,20 +714,12 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/res/layout/menu_frame_two.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/menu_frame.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/activity_main.xml">
@@ -707,7 +727,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/centerview.xml">
@@ -715,7 +735,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/general_list_item.xml">
@@ -723,7 +743,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/list_grid.xml">
@@ -731,17 +751,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/list.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/row.xml">
@@ -749,7 +759,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding />
         </state>
       </provider>
@@ -759,7 +769,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="42" selection-start="262" selection-end="262" vertical-scroll-proportion="0.0">
+        <state line="4" column="42" selection-start="262" selection-end="262" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding />
         </state>
       </provider>
@@ -769,49 +779,67 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="43" selection-start="230" selection-end="230" vertical-scroll-proportion="0.0">
+        <state line="4" column="43" selection-start="230" selection-end="230" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/iory/zhixun/slidingmenu/lib/SlidingListActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="247" selection-end="247" vertical-scroll-proportion="0.0">
+        <state line="9" column="13" selection-start="247" selection-end="247" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/iory/zhixun/slidingmenu/lib/SlidingFragmentActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="13" selection-start="230" selection-end="230" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/iory/zhixun/fragments/SampleListFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="40" selection-start="551" selection-end="551" vertical-scroll-proportion="0.0">
+        <state line="8" column="13" selection-start="230" selection-end="230" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/iory/zhixun/ui/BaseActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="922" selection-end="922" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/iory/zhixun/ui/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="33" selection-start="349" selection-end="349" vertical-scroll-proportion="-6.84">
+        <state line="35" column="0" selection-start="928" selection-end="928" vertical-scroll-proportion="0.0" vertical-offset="646" max-vertical-offset="1919">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/iory/zhixun/fragments/ColorFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="55" selection-start="738" selection-end="738" vertical-scroll-proportion="0.4143302">
+        <state line="15" column="29" selection-start="366" selection-end="366" vertical-scroll-proportion="0.08649469" vertical-offset="114" max-vertical-offset="798" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/iory/zhixun/ui/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="66" selection-start="1509" selection-end="1509" vertical-scroll-proportion="0.0" vertical-offset="152" max-vertical-offset="988">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/iory/zhixun/view/EdgeGlow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="57" selection-start="1108" selection-end="1108" vertical-scroll-proportion="0.0" vertical-offset="26" max-vertical-offset="6042">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/popuplist_row.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="631">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/personal_row.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2603">
           <folding />
         </state>
       </provider>
@@ -845,7 +873,6 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
-          <last-edited>android-support-v4</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -857,7 +884,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>Android 4.2.2 Platform</last-edited>
+          <last-edited>1.6</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -874,7 +901,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>

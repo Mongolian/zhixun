@@ -151,7 +151,7 @@ public final class LinkData {
 
 		
 		
-		String url = "http://192.168.1.104:8080/zhixun/core?version=333";
+		String url = "http://www.zhixun.info:8888/zhixun/core?version=333";
 
 		ReqGetNewsList req = new ReqGetNewsList();
 		SessionInfo  sinfo=new SessionInfo();
